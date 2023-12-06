@@ -1,0 +1,36 @@
+.main_title {
+  /* display: flex;
+  flex-direction: column;
+  align-items: flex-end; */
+  background-image: url(../../assets/images/title_img.svg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  transform: scaleX(-1);
+  padding: 5rem 2.5rem 13rem;
+}
+.title_content_wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  transform: scaleX(-1);
+}
+.main_header {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  font-size: 6rem;
+  color: #ffffff;
+  /* transform: scaleX(-1); */
+}
+
+.main_title_button {
+  background-color: #339933;
+  border: none;
+  border-radius: 0.5rem;
+  width: 218px;
+  height: 58px;
+  padding: 1rem 3.5rem;
+  font-size: 20px;
+  color: #ffffff;
+  /* transform: scaleX(-1) */
+}

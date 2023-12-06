@@ -1,0 +1,16 @@
+import styles from "./index.module.css";
+
+function MainTitle() {
+  return (
+    <div className={styles.main_title}>
+      <div className={styles.title_content_wrapper}>
+        <h1 className={styles.main_header}>
+          Amazing Discounts <br /> on Garden Products!
+        </h1>
+        <button className={styles.main_title_button}>Check out</button>
+      </div>
+    </div>
+  );
+}
+
+export default MainTitle;

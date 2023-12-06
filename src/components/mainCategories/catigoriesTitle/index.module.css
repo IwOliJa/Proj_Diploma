@@ -1,0 +1,31 @@
+/* .main_container {
+  padding: 2.5rem;
+} */
+.title_content {
+  display: flex;
+  align-items: center;
+}
+.categories_header {
+  font-size: 4rem;
+  font-weight: 700;
+  color: #282828;
+  font-family: "Montserrat", sans-serif;
+}
+.hr {
+  width: 65%;
+  border: solid 1px #dddddd;
+  margin-top: 0.6rem;
+  margin-left: 2rem;
+}
+
+.categories_button {
+  width: 10%;
+  padding: 0.5rem;
+  border-color: #dddddd;
+  border-radius: 0.5rem;
+  color: #8b8b8b;
+  font-size: 1rem;
+  font-weight: 500;
+  font-family: "Montserrat", sans-serif;
+  text-align: center;
+}
