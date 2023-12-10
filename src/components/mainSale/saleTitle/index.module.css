@@ -4,21 +4,20 @@
   margin-bottom: 2.5rem;
   margin-top: 2.5rem;
 }
-.categories_header {
+.sale_header {
   font-size: 4rem;
   font-weight: 700;
 }
 .hr {
-  width: 65%;
+  width: 82%;
   border: solid 1px #dddddd;
   margin-top: 0.6rem;
   margin-left: 2rem;
 }
 
-.categories_button {
+.sale_button {
   min-width: 11%;
   padding: 0.5rem;
-
   border-color: #dddddd;
   border-radius: 0.5rem;
   color: #8b8b8b;
@@ -28,10 +27,10 @@
 }
 
 @media (max-width: 1024px) {
-  .categories_header {
+  .sale_header {
     font-size: 3.5rem;
   }
-  .categories_button {
+  .sale_button {
     min-width: 16%;
   }
 }
@@ -45,10 +44,18 @@
     width: 100%;
     margin-left: 0;
   }
+  .sale_button {
+    min-width: 18%;
+  }
 }
 
 @media (max-width: 425px) {
-  .categories_header {
+  .sale_button {
+    min-width: 38%;
+  }
+}
+@media (max-width: 425px) {
+  .sale_header {
     font-size: 2.5rem;
   }
   .title_content {

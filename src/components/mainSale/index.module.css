@@ -1,0 +1,10 @@
+.main_container {
+  width: 100%;
+  height: auto;
+  padding: 2.5rem;
+}
+@media (max-width: 425px) {
+  .main_container {
+    padding-top: 0;
+  }
+}

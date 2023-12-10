@@ -1,0 +1,59 @@
+.sale_wrapper {
+  padding: 5 rem;
+  display: flex;
+  justify-content: space-between;
+  text-align: left;
+  font-size: 1.3rem;
+  color: #282828;
+  font-family: "Montserrat", sans-serif;
+}
+
+.button_wrapper {
+  width: 316px;
+  height: 442px;
+  /* position: relative; */
+  border: 1px solid #dddddd;
+  border-radius: 1rem;
+  background: center;
+}
+
+.image_button {
+  width: 100%;
+  height: 284px;
+  background-size: cover;
+  border: none;
+  border-top-right-radius: 1rem;
+  border-top-left-radius: 1rem;
+  overflow: hidden;
+}
+
+.card_name {
+  font-size: 1.2rem;
+  font-weight: 500;
+  color: #282828;
+  margin-left: 2rem;
+  margin-top: 1.4rem;
+  margin-bottom: 1.4rem;
+}
+.discount {
+  font-size: 2.5rem;
+  font-weight: 600;
+  color: #282828;
+  margin-left: 2rem;
+  margin-right: 1rem;
+}
+
+@media (max-width: 1024px) {
+  .sale_wrapper {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 4rem;
+  }
+}
+@media (max-width: 768px) {
+  .sale_wrapper {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+  }
+}
