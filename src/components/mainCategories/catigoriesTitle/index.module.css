@@ -1,14 +1,13 @@
-/* .main_container {
-  padding: 2.5rem;
-} */
 .title_content {
   display: flex;
   align-items: center;
+  margin-bottom: 2.5rem;
+  margin-top: 2.5rem;
 }
 .categories_header {
   font-size: 4rem;
   font-weight: 700;
-  color: #282828;
+  /* line-height: 70.4px; */
   font-family: "Montserrat", sans-serif;
 }
 .hr {
@@ -19,8 +18,9 @@
 }
 
 .categories_button {
-  width: 10%;
+  min-width: 11%;
   padding: 0.5rem;
+
   border-color: #dddddd;
   border-radius: 0.5rem;
   color: #8b8b8b;
@@ -28,4 +28,24 @@
   font-weight: 500;
   font-family: "Montserrat", sans-serif;
   text-align: center;
+}
+
+@media (max-width: 1024px) {
+  .categories_header {
+    font-size: 3.5rem;
+  }
+  .categories_button {
+    min-width: 16%;
+  }
+}
+@media (max-width: 768px) {
+  .title_content {
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+  }
+  .hr {
+    width: 100%;
+    margin-left: 0;
+  }
 }

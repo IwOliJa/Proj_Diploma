@@ -1,27 +1,46 @@
 import logo from "../../assets/images/logo.svg";
 import icon from "../../assets/images/icon.svg";
 import styles from "./index.module.css";
+import { VscMenu } from "react-icons/vsc";
+import { VscChromeClose } from "react-icons/vsc";
+import { useState } from "react";
 
 function Header({ menulist }) {
+  const [isOpen, setIsOpen] = useState(false);
+
   return (
     <header className={styles.header}>
-      <img className={styles.header_logo} src={logo} alt="logo" />
-      <button className={styles.menu_button}>
-        <span className={styles.button_view}></span>
-        <span className={styles.button_view}></span>
-        <span className={styles.button_view}></span>
-      </button>
       <nav className={styles.nav_menu}>
-        {menulist.map((el) => {
-          return (
-            <ul className={styles.nav_menu_li}>
-              <li key={Math.random()}>{el.page}</li>
-            </ul>
-          );
-        })}
-      </nav>
+        <img className={styles.header_logo} src={logo} alt="logo" />
 
-      <img className={styles.header_icon} src={icon} alt="icon" />
+        <ul
+          className={
+            isOpen
+              ? [`${styles.nav_menu_list} ${styles.active}`]
+              : [styles.nav_menu_list]
+          }
+        >
+          {menulist.map((el) => {
+            return (
+              <li
+                onClick={() => setIsOpen(!isOpen)}
+                className={styles.nav_menu_item}
+                key={Math.random()}
+              >
+                {el.page}
+              </li>
+            );
+          })}
+        </ul>
+
+        <button
+          onClick={() => setIsOpen(!isOpen)}
+          className={styles.nav_menu_button}
+        >
+          {isOpen ? <VscChromeClose size="30" /> : <VscMenu size="30" />}
+        </button>
+        <img className={styles.header_icon} src={icon} alt="icon" />
+      </nav>
     </header>
   );
 }
