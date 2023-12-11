@@ -32,25 +32,28 @@
 }
 @media (max-width: 1024px) {
   .main_header {
-    font-size: 4rem;
+    font-size: 5rem;
     text-align: center;
   }
   .title_content_wrapper {
     align-items: center;
   }
   .main_title {
-    padding-top: 10rem;
-    padding-bottom: 8rem;
+    padding: 9rem 0;
   }
 }
 
 @media (max-width: 768px) {
   .main_header {
-    font-size: 3.5rem;
+    font-size: 4rem;
   }
 }
 @media (max-width: 425px) {
   .main_header {
-    font-size: 3rem;
+    font-size: 3.5rem;
+    line-height: 5.5rem;
+  }
+  .main_title {
+    padding: 3rem 0;
   }
 }

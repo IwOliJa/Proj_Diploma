@@ -1,8 +1,14 @@
+import ContactBlock from "./contactBlock";
+import styles from "./index.module.css";
+import LocationBlock from "./locationBlock";
+
 function Footer() {
   return (
-    <>
-      <h2>This is Footer</h2>
-    </>
+    <div className={styles.main_container}>
+      <h>Contact</h>
+      <ContactBlock />
+      <LocationBlock />
+    </div>
   );
 }
 
