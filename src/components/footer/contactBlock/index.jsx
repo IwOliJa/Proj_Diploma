@@ -1,13 +1,32 @@
+import styles from "./index.module.css";
+import { BiLogoInstagramAlt } from "react-icons/bi";
+import { IoLogoWhatsapp } from "react-icons/io";
+
 function ContactBlock() {
   return (
-    <div>
-      <div>
-        <p>PHONE</p>
-        <p>ADRESS INFO</p>
+    <div className={styles.contacts_wrapper}>
+      <div className={styles.box_large}>
+        <p className={styles.p_name}>Phone</p>
+        <p className={styles.p_info}>+49 999 999 99 99</p>
       </div>
-      <div>
-        <span>MEDIA</span>
-        <p>WORKING HOURS</p>
+      <div className={styles.box_small}>
+        <p className={styles.p_name}>Socials</p>
+        <span>
+          <BiLogoInstagramAlt size="45px" />
+        </span>
+        <span>
+          <IoLogoWhatsapp size="43px" />
+        </span>
+      </div>
+      <div className={styles.box_large}>
+        <p className={styles.p_name}>Adress</p>
+        <p className={styles.p_info}>
+          Linkstraße 2, 8 OG, 10785, Berlin, Deutschland
+        </p>
+      </div>
+      <div className={styles.box_small}>
+        <p className={styles.p_name}>Working Hours</p>
+        <p className={styles.p_info}>24 hours a day</p>
       </div>
     </div>
   );

@@ -14,6 +14,7 @@
 @media (max-width: 1024px) {
   .main_container > h {
     font-size: 3.5rem;
+    text-align: center;
   }
 }
 @media (max-width: 768px) {
@@ -25,5 +26,9 @@
 @media (max-width: 425px) {
   .main_container > h {
     font-size: 2.5rem;
+  }
+  .main_container {
+    padding-right: 0.5rem;
+    padding-left: 0.5rem;
   }
 }
