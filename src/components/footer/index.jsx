@@ -5,7 +5,7 @@ import LocationBlock from "./locationBlock";
 function Footer() {
   return (
     <div className={styles.main_container}>
-      <h>Contact</h>
+      <p>Contact</p>
       <ContactBlock />
       <LocationBlock />
     </div>

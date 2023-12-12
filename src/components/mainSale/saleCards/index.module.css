@@ -8,6 +8,21 @@
   font-family: "Montserrat", sans-serif;
 }
 
+.discount_item {
+  position: relative;
+  font-size: 1.2rem;
+  font-weight: 500;
+  color: #8b8b8b;
+}
+
+.delete_symbol {
+  position: absolute;
+  top: 50%;
+  right: 0;
+  width: 100%;
+  border: solid 1px #8b8b8b;
+}
+
 .button_wrapper {
   width: 316px;
   height: 442px;

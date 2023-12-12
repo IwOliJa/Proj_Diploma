@@ -5,26 +5,26 @@
   height: auto;
   padding: 2.5rem;
 }
-.main_container > h {
+.main_container > p {
   font-size: 4rem;
   font-weight: 700;
   color: #282828;
 }
 
 @media (max-width: 1024px) {
-  .main_container > h {
+  .main_container > p {
     font-size: 3.5rem;
     text-align: center;
   }
 }
 @media (max-width: 768px) {
-  .main_container > h {
+  .main_container > p {
     font-size: 3rem;
     text-align: center;
   }
 }
 @media (max-width: 425px) {
-  .main_container > h {
+  .main_container > p {
     font-size: 2.5rem;
   }
   .main_container {

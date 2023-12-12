@@ -12,9 +12,9 @@ function FormContent() {
         />
       </div>
       <form className={styles.form_content}>
-        <input value="Name" />
-        <input value="Phone number" />
-        <input value="Email" />
+        <input type="text" value="" placeholder="Name" />
+        <input type="text" value="" placeholder="Phone number" />
+        <input type="text" value="" placeholder="Email" />
         <button className={styles.form_button}>Get a discount</button>
       </form>
     </div>

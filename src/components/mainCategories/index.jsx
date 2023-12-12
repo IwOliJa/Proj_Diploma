@@ -1,12 +1,12 @@
 import styles from "./index.module.css";
 import CategoriesTitle from "./catigoriesTitle";
-import CategoriesButtons from "./categoriesButtons";
+import CategoriesCards from "./categoriesCards";
 
 function MainCategories() {
   return (
     <div className={styles.main_container}>
       <CategoriesTitle />
-      <CategoriesButtons />
+      <CategoriesCards />
     </div>
   );
 }
