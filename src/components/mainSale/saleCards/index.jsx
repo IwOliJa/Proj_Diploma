@@ -7,8 +7,8 @@ import saleImg4 from "../../../assets/images/saleImg4.svg";
 function SaleCards() {
   return (
     <div className={styles.sale_wrapper}>
-      <div className={styles.button_wrapper}>
-        <button className={styles.image_button}>
+      <div className={styles.card_wrapper}>
+        <button className={styles.image}>
           <img src={saleImg1} alt="Deco brige" />
         </button>
         <p className={styles.card_name}>Decorative forged bridge</p>
@@ -17,8 +17,8 @@ function SaleCards() {
           $1000 <span className={styles.delete_symbol}></span>
         </span>
       </div>
-      <div className={styles.button_wrapper}>
-        <button className={styles.image_button}>
+      <div className={styles.card_wrapper}>
+        <button className={styles.image}>
           <img src={saleImg2} alt="Flower basket" />
         </button>
         <p className={styles.card_name}>Flower basket</p>
@@ -27,8 +27,8 @@ function SaleCards() {
           $150<span className={styles.delete_symbol}></span>
         </span>
       </div>
-      <div className={styles.button_wrapper}>
-        <button className={styles.image_button}>
+      <div className={styles.card_wrapper}>
+        <button className={styles.image}>
           <img src={saleImg3} alt="Aquariun lock" />
         </button>
         <p className={styles.card_name}>Aquarium lock</p>
@@ -37,8 +37,8 @@ function SaleCards() {
           $200<span className={styles.delete_symbol}></span>
         </span>
       </div>
-      <div className={styles.button_wrapper}>
-        <button className={styles.image_button}>
+      <div className={styles.card_wrapper}>
+        <button className={styles.image}>
           <img src={saleImg4} alt="Secateurs" />
         </button>
         <p className={styles.card_name}>Secateurs</p>

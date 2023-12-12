@@ -7,26 +7,26 @@ import imgCategory4 from "../../../assets/images/category4.svg";
 function CategoriesCards() {
   return (
     <div className={styles.categories_wrapper}>
-      <div className={styles.button_wrapper}>
-        <button className={styles.image_button}>
+      <div className={styles.card_wrapper}>
+        <button className={styles.image}>
           <img src={imgCategory1} alt="Fertilizer" />
         </button>
         <p className={styles.card_name}>Fertilizer</p>
       </div>
-      <div className={styles.button_wrapper}>
-        <button className={styles.image_button}>
+      <div className={styles.card_wrapper}>
+        <button className={styles.image}>
           <img src={imgCategory2} alt="Protective products" />
         </button>
         <p className={styles.card_name}>Protective products and septic tanks</p>
       </div>
-      <div className={styles.button_wrapper}>
-        <button className={styles.image_button}>
+      <div className={styles.card_wrapper}>
+        <button className={styles.image}>
           <img src={imgCategory3} alt="Planting material" />
         </button>
         <p className={styles.card_name}>Planting material</p>
       </div>
-      <div className={styles.button_wrapper}>
-        <button className={styles.image_button}>
+      <div className={styles.card_wrapper}>
+        <button className={styles.image}>
           <img src={imgCategory4} alt="Tools and equipment" />
         </button>
         <p className={styles.card_name}>Tools and equipment</p>
