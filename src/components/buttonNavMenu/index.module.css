@@ -1,0 +1,13 @@
+.btn {
+  border: 1px solid #dddddd;
+  border-radius: 0.5rem;
+  min-width: 118px;
+  color: #8b8b8b;
+  font-size: 1rem;
+  font-weight: 500;
+  padding: 0.5rem 1rem;
+  margin-right: 1.5rem;
+}
+.dark {
+  color: #282828;
+}

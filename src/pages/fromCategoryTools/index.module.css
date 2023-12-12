@@ -1,0 +1,53 @@
+.main_container {
+  padding: 2.5rem 2.5rem 0 2.5rem;
+}
+
+.container_header {
+  font-size: 4rem;
+  font-weight: 700;
+  margin: 2.5rem 0;
+}
+
+.buttons_wrapper {
+  display: flex;
+  position: relative;
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+.hr,
+.hr2 {
+  position: absolute;
+  width: 1.5rem;
+  margin-top: 1.1rem;
+  height: 0;
+  border: solid 1px #dddddd;
+}
+
+.hr {
+  left: 120px;
+}
+.hr2 {
+  left: 266px;
+}
+
+.sorting_fields {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+@media (max-width: 1024px) {
+  .container_header {
+    font-size: 3.5rem;
+  }
+}
+@media (max-width: 768px) {
+  .container_header {
+    font-size: 3rem;
+  }
+}
+@media (max-width: 425px) {
+  .container_header {
+    font-size: 2.5rem;
+  }
+}

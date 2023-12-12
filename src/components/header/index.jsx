@@ -9,7 +9,7 @@ function Header({ menulist }) {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <header className={styles.header}>
+    <div className={styles.header}>
       <nav className={styles.nav_menu}>
         <img className={styles.header_logo} src={logo} alt="logo" />
 
@@ -41,7 +41,7 @@ function Header({ menulist }) {
         </button>
         <img className={styles.header_icon} src={icon} alt="icon" />
       </nav>
-    </header>
+    </div>
   );
 }
 
