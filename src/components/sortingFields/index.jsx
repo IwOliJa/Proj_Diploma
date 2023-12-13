@@ -5,13 +5,8 @@ function SortingFields() {
     <div className={styles.forms_content}>
       <div className={styles.form_wrapper}>
         <label className={styles.price}>Price</label>
-        <input
-          className={styles.from}
-          type="text"
-          value=""
-          placeholder="from"
-        />
-        <input className={styles.to} type="text" value="" placeholder="to" />
+        <input className={styles.from} type="" value="" placeholder="from" />
+        <input className={styles.to} type="" value="" placeholder="to" />
       </div>
       <div className={styles.form_wrapper}>
         <label className={styles.discount}>Discounted items</label>
