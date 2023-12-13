@@ -1,10 +1,11 @@
 .btn {
   border: 1px solid #dddddd;
   border-radius: 0.5rem;
+  background-color: transparent;
   min-width: 118px;
-  color: #8b8b8b;
   font-size: 1rem;
   font-weight: 500;
+  color: #8b8b8b;
   padding: 0.5rem 1rem;
   margin-right: 1.5rem;
 }

@@ -11,4 +11,6 @@
 .App {
   margin: 0 auto;
   max-width: 1920px;
+  border-left: #dddddd 1px solid;
+  border-right: #dddddd 1px solid;
 }
