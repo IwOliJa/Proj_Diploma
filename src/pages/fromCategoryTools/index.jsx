@@ -1,7 +1,8 @@
 import styles from "./index.module.css";
-import ButtonNavMenu from "../../components/buttonNavMenu";
-import CategoryBlockTools from "../../components/categoryBlockTools";
+import ButtonNavMenu from "../../components/buttonsNavMenu";
+import CategoryToolsBlock from "../../components/fromCategoryToolsBlock";
 import { menulist3 } from "../../utils";
+import SortingFields from "../../components/sortingFields";
 
 function FromCategoryTools() {
   return (
@@ -16,16 +17,8 @@ function FromCategoryTools() {
         })}
       </div>
       <p className={styles.container_header}>Tools and equipment</p>
-      <div className={styles.sorting_fields}>
-        <p>Price</p>
-        <input type="text" />
-        <input type="text" />
-        <p>Discounted items</p>
-        <input type="text" />
-        <p>Sorted</p>
-        <input type="text" />
-      </div>
-      <CategoryBlockTools />
+      <SortingFields />
+      <CategoryToolsBlock />
     </div>
   );
 }

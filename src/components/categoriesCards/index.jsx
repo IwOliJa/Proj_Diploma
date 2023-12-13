@@ -1,8 +1,8 @@
 import styles from "./index.module.css";
-import imgCategory1 from "../../../assets/images/category1.svg";
-import imgCategory2 from "../../../assets/images/category2.svg";
-import imgCategory3 from "../../../assets/images/category3.svg";
-import imgCategory4 from "../../../assets/images/category4.svg";
+import imgCategory1 from "../../assets/images/category1.svg";
+import imgCategory2 from "../../assets/images/category2.svg";
+import imgCategory3 from "../../assets/images/category3.svg";
+import imgCategory4 from "../../assets/images/category4.svg";
 
 function CategoriesCards() {
   return (

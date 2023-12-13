@@ -1,4 +1,4 @@
-.sale_wrapper {
+.prodact_wrapper {
   padding: 5 rem;
   display: flex;
   flex-wrap: wrap;
@@ -60,14 +60,12 @@
 }
 
 @media (max-width: 1024px) {
-  .sale_wrapper {
-    flex-wrap: wrap;
-    justify-content: center;
+  .prodact_wrapper {
     gap: 5rem;
   }
 }
 @media (max-width: 768px) {
-  .sale_wrapper {
+  .prodact_wrapper {
     gap: 2rem;
   }
 }

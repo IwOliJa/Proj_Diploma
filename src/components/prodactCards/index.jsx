@@ -1,12 +1,12 @@
 import styles from "./index.module.css";
-import saleImg1 from "../../../assets/images/saleImg1.svg";
-import saleImg2 from "../../../assets/images/saleImg2.svg";
-import saleImg3 from "../../../assets/images/saleImg3.svg";
-import saleImg4 from "../../../assets/images/saleImg4.svg";
+import saleImg1 from "../../assets/images/saleImg1.svg";
+import saleImg2 from "../../assets/images/saleImg2.svg";
+import saleImg3 from "../../assets/images/saleImg3.svg";
+import saleImg4 from "../../assets/images/saleImg4.svg";
 
-function SaleCards() {
+function ProdactCards() {
   return (
-    <div className={styles.sale_wrapper}>
+    <div className={styles.prodact_wrapper}>
       <div className={styles.card_wrapper}>
         <button className={styles.image}>
           <img src={saleImg1} alt="Deco brige" />
@@ -51,4 +51,4 @@ function SaleCards() {
   );
 }
 
-export default SaleCards;
+export default ProdactCards;

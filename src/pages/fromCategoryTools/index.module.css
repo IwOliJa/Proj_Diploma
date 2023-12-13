@@ -31,11 +31,6 @@
   left: 266px;
 }
 
-.sorting_fields {
-  display: flex;
-  flex-wrap: wrap;
-}
-
 @media (max-width: 1024px) {
   .container_header {
     font-size: 3.5rem;
