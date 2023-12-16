@@ -24,3 +24,10 @@ export const menulist5 = [
   { id: 1, item: "Main Page" },
   { id: 2, item: "All Sales" },
 ];
+
+export const menulist6 = [
+  { id: 1, item: "Main Page" },
+  { id: 2, item: "Categories" },
+  { id: 3, item: "Tools and equipment" },
+  { id: 4, item: "Secateurs" },
+];

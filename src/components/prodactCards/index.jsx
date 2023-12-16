@@ -12,7 +12,7 @@ function ProdactCards() {
           <img src={saleImg1} alt="Deco brige" />
         </button>
         <p className={styles.card_name}>Decorative forged bridge</p>
-        <span className={styles.discount}>$500</span>
+        <span className={styles.product_price}>$500</span>
         <span className={styles.discount_item}>
           $1000 <span className={styles.delete_symbol}></span>
         </span>
@@ -22,7 +22,7 @@ function ProdactCards() {
           <img src={saleImg2} alt="Flower basket" />
         </button>
         <p className={styles.card_name}>Flower basket</p>
-        <span className={styles.discount}>$100</span>
+        <span className={styles.product_price}>$100</span>
         <span className={styles.discount_item}>
           $150<span className={styles.delete_symbol}></span>
         </span>
@@ -32,7 +32,7 @@ function ProdactCards() {
           <img src={saleImg3} alt="Aquariun lock" />
         </button>
         <p className={styles.card_name}>Aquarium lock</p>
-        <span className={styles.discount}>$150</span>
+        <span className={styles.product_price}>$150</span>
         <span className={styles.discount_item}>
           $200<span className={styles.delete_symbol}></span>
         </span>
@@ -42,7 +42,7 @@ function ProdactCards() {
           <img src={saleImg4} alt="Secateurs" />
         </button>
         <p className={styles.card_name}>Secateurs</p>
-        <span className={styles.discount}>$199</span>
+        <span className={styles.product_price}>$199</span>
         <span className={styles.discount_item}>
           $240<span className={styles.delete_symbol}></span>
         </span>

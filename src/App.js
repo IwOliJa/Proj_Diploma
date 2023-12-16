@@ -1,7 +1,9 @@
 import "./App.css";
 import Footer from "./components/footer/index.jsx";
 import Header from "./components/header/index.jsx";
-import AllDiscounts from "./pages/allDiscounts/index.jsx";
+import NotFoundPage from "./pages/notFound/index.jsx";
+// import ProductInfo from "./pages/productInfo/index.jsx";
+// import AllDiscounts from "./pages/allDiscounts/index.jsx";
 // import AllProducts from "./pages/allProducts/index.jsx";
 // import FromCategoryTools from "./pages/fromCategoryTools/index.jsx";
 // import AllCategories from "./pages/allCategories/index.jsx";
@@ -20,7 +22,10 @@ function App() {
       {/* <AllCategories /> */}
       {/* <FromCategoryTools /> */}
       {/* <AllProducts /> */}
-      <AllDiscounts />
+      {/* <AllDiscounts /> */}
+      {/* <ProductInfo /> */}
+      <NotFoundPage />
+
       <Footer />
     </div>
   );
