@@ -9,13 +9,13 @@ function ProducktInfoBlock() {
     <div className={styles.content_wrapper}>
       <div className={styles.images_content}>
         <div className={styles.content_small}>
-          <div className={styles.card_green}>
+          <div className={styles.small_card}>
             <img src={Secateurs1} alt="secateurs" />
           </div>
-          <div className={styles.card_gray}>
+          <div className={styles.small_card}>
             <img src={Secateurs2} alt="secateurs" />
           </div>
-          <div className={styles.card_gray}>
+          <div className={styles.small_card}>
             <img src={Secateurs3} alt="secateurs" />
           </div>
         </div>

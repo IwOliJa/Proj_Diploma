@@ -1,8 +1,9 @@
 import "./App.css";
 import Footer from "./components/footer/index.jsx";
 import Header from "./components/header/index.jsx";
+import CartEmpty from "./pages/cartEmpty/index.jsx";
 // import NotFoundPage from "./pages/notFound/index.jsx";
-import CartShopping from "./pages/cartShopping/index.jsx";
+// import CartShopping from "./pages/cartShopping/index.jsx";
 // import ProductInfo from "./pages/productInfo/index.jsx";
 // import AllDiscounts from "./pages/allDiscounts/index.jsx";
 // import AllProducts from "./pages/allProducts/index.jsx";
@@ -25,8 +26,9 @@ function App() {
       {/* <AllProducts /> */}
       {/* <AllDiscounts /> */}
       {/* <ProductInfo /> */}
-      <CartShopping />
+      {/* <CartShopping /> */}
       {/* <NotFoundPage /> */}
+      <CartEmpty />
       <Footer />
     </div>
   );

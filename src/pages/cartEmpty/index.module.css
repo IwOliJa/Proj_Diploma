@@ -1,0 +1,42 @@
+.main_container {
+  width: 100%;
+  padding: 0 2.5rem;
+}
+
+.message {
+  font-size: 1.3rem;
+  font-weight: 500;
+  color: #282828;
+}
+
+.continue_button {
+  width: 318px;
+  height: 58px;
+  background-color: #339933;
+  border-radius: 0.3rem;
+  border: none;
+  padding: 1rem 3.5rem;
+  margin: 2rem 0;
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #ffffff;
+}
+@media (max-width: 768px) {
+  .main_container {
+    text-align: center;
+  }
+}
+@media (max-width: 425px) {
+  .main_container {
+    width: 100%;
+    padding: 0;
+    padding: 1rem;
+  }
+  .message {
+    font-size: 1.2rem;
+  }
+  .continue_button {
+    width: 290px;
+    font-size: 1rem;
+  }
+}

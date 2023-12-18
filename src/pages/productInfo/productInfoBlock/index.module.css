@@ -15,8 +15,8 @@
   flex-direction: column;
   justify-content: space-between;
 }
-.card_green,
-.card_gray {
+
+.small_card {
   width: 200px;
   height: 180px;
   background-size: cover;
