@@ -1,4 +1,5 @@
 import styles from "./index.module.css";
+import { Link } from "react-router-dom";
 
 function MainTitle() {
   return (
@@ -7,7 +8,9 @@ function MainTitle() {
         <h1 className={styles.main_header}>
           Amazing Discounts <br /> on Garden Products!
         </h1>
-        <button className={styles.main_title_button}>Check out</button>
+        <Link to="/sales">
+          <button className={styles.main_title_button}>Check out</button>
+        </Link>
       </div>
     </div>
   );

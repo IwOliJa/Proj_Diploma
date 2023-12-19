@@ -1,10 +1,10 @@
 import styles from "./index.module.css";
 import ButtonNavMenu from "../../components/buttonsNavMenu";
-import CategoryToolsBlock from "../../components/fromCategoryToolsBlock";
+import FromCategoryBlock from "../../components/fromCategoryBlock";
 import { menulist3 } from "../../utils";
 import SortingFields from "../../components/sortingFields";
 
-function FromCategoryTools() {
+function FromCategory() {
   return (
     <div className={styles.main_container}>
       <div className={styles.buttons_wrapper}>
@@ -18,8 +18,8 @@ function FromCategoryTools() {
       </div>
       <p className={styles.container_header}>Tools and equipment</p>
       <SortingFields />
-      <CategoryToolsBlock />
+      <FromCategoryBlock />
     </div>
   );
 }
-export default FromCategoryTools;
+export default FromCategory;

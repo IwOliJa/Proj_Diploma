@@ -7,6 +7,7 @@
 .categories_header {
   font-size: 4rem;
   font-weight: 700;
+  color: #282828;
 }
 .hr {
   width: 65%;
@@ -16,7 +17,7 @@
 }
 
 .categories_button {
-  min-width: 11%;
+  min-width: 200px;
   padding: 0.5rem;
   border-color: #dddddd;
   border-radius: 0.5rem;
@@ -30,9 +31,6 @@
 @media (max-width: 1024px) {
   .categories_header {
     font-size: 3.5rem;
-  }
-  .categories_button {
-    min-width: 16%;
   }
 }
 @media (max-width: 768px) {

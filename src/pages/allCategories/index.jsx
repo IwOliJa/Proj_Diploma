@@ -1,6 +1,5 @@
 import ButtonNavMenu from "../../components/buttonsNavMenu";
 import CategoriesBlock from "../../components/allCategoriesBlock/index.jsx";
-import CategoriesTitle from "../../components/mainCategories/catigoriesTitle";
 import styles from "./index.module.css";
 import { menulist2 } from "../../utils/index.js";
 
@@ -15,7 +14,7 @@ function AllCategories() {
           );
         })}
       </div>
-      <CategoriesTitle />
+      <p className={styles.categories_header}>Categories</p>
       <CategoriesBlock />
     </div>
   );

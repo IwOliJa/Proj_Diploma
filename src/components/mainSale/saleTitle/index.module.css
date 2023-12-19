@@ -16,7 +16,7 @@
 }
 
 .sale_button {
-  min-width: 11%;
+  min-width: 200px;
   padding: 0.5rem;
   border-color: #dddddd;
   border-radius: 0.5rem;
@@ -29,9 +29,6 @@
 @media (max-width: 1024px) {
   .sale_header {
     font-size: 3.5rem;
-  }
-  .sale_button {
-    min-width: 16%;
   }
 }
 @media (max-width: 768px) {
@@ -47,15 +44,9 @@
     width: 100%;
     margin-left: 0;
   }
-  .sale_button {
-    min-width: 18%;
-  }
 }
 
 @media (max-width: 425px) {
-  .sale_button {
-    min-width: 38%;
-  }
 }
 @media (max-width: 425px) {
   .sale_header {

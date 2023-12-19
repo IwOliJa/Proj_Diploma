@@ -7,7 +7,7 @@ import CartShopping from "./pages/cartShopping/index.jsx";
 import ProductInfo from "./pages/productInfo/index.jsx";
 import AllDiscounts from "./pages/allDiscounts/index.jsx";
 import AllProducts from "./pages/allProducts/index.jsx";
-import FromCategoryTools from "./pages/fromCategoryTools/index.jsx";
+import FromCategory from "./pages/fromCategory/index.jsx";
 import AllCategories from "./pages/allCategories/index.jsx";
 import MainPage from "./pages/mainPage/index.jsx";
 import { menulist } from "./utils/index.js";
@@ -24,7 +24,7 @@ function App() {
       <Routes>
         <Route path="/" element={<MainPage />} />
         <Route path="/categories" element={<AllCategories />} />
-        <Route path="/categories/tools" element={<FromCategoryTools />} />
+        <Route path="/categories/tools" element={<FromCategory />} />
         <Route path="/products" element={<AllProducts />} />
         <Route path="/sales" element={<AllDiscounts />} />
         <Route path="/products/product" element={<ProductInfo />} />

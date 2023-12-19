@@ -1,7 +1,7 @@
 import styles from "./index.module.css";
 import ProdactCards from "../prodactCards";
 
-function CategoryToolsBlock() {
+function FromCategoryBlock() {
   const render = [1, 2];
   return (
     <div className={styles.prodacts_container}>
@@ -14,4 +14,4 @@ function CategoryToolsBlock() {
     </div>
   );
 }
-export default CategoryToolsBlock;
+export default FromCategoryBlock;
