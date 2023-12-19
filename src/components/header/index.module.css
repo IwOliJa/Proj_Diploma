@@ -26,13 +26,15 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  font-weight: 500;
-  font-size: 1.2rem;
   margin-top: 3.3rem;
   margin-bottom: 3.3rem;
 }
 .nav_menu_item {
   cursor: pointer;
+  text-decoration: none;
+  color: #282828;
+  font-weight: 500;
+  font-size: 1.2rem;
 }
 .nav_menu_item:hover {
   color: #339933;
@@ -57,19 +59,24 @@
   .nav_menu_list {
     margin: 0 auto;
     display: block;
-    width: 50%;
+    width: 45%;
     height: auto;
     padding-bottom: 1.8rem;
+    padding-top: 1.8rem;
     position: fixed;
     top: 0;
     left: -100%;
     background-color: rgba(255, 255, 255, 0.836);
     border: 2px solid #3399339f;
     border-radius: 1.2rem;
-    font-size: 1.5rem;
     text-align: center;
     z-index: 1;
     transition: left 1.3s;
+  }
+
+  .nav_menu_item {
+    font-size: 1.5rem;
+    line-height: 3rem;
   }
   .active {
     left: 25%;
@@ -77,10 +84,6 @@
 
   .header_logo {
     margin: 2rem 0 2rem 2.5rem;
-  }
-
-  .nav_menu_item {
-    margin-top: 1.8rem;
   }
 
   .nav_menu_button {
@@ -113,7 +116,7 @@
   .nav_menu_list {
     margin-top: 6%;
     padding-left: 2.5rem;
-    padding-top: 1.6rem;
+    padding-top: 3.1rem;
     width: 75%;
     height: 93%;
     top: 0;
@@ -136,5 +139,16 @@
   }
   .header_icon {
     margin-right: 1rem;
+  }
+}
+
+@media (max-width: 375px) {
+  .nav_menu_list {
+    width: 80%;
+  }
+}
+@media (max-width: 320px) {
+  .nav_menu_list {
+    width: 100%;
   }
 }

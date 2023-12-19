@@ -4,6 +4,7 @@ import styles from "./index.module.css";
 import { VscMenu } from "react-icons/vsc";
 import { VscChromeClose } from "react-icons/vsc";
 import { useState } from "react";
+import { Link } from "react-router-dom";
 
 function Header({ menulist }) {
   const [isOpen, setIsOpen] = useState(false);
@@ -11,7 +12,9 @@ function Header({ menulist }) {
   return (
     <div className={styles.header}>
       <nav className={styles.nav_menu}>
-        <img className={styles.header_logo} src={logo} alt="logo" />
+        <Link to="/">
+          <img className={styles.header_logo} src={logo} alt="logo" />
+        </Link>
 
         <ul
           className={
@@ -22,17 +25,14 @@ function Header({ menulist }) {
         >
           {menulist.map((el) => {
             return (
-              <li
-                onClick={() => setIsOpen(!isOpen)}
-                className={styles.nav_menu_item}
-                key={Math.random()}
-              >
-                {el.page}
+              <li onClick={() => setIsOpen(!isOpen)} key={Math.random()}>
+                <Link className={styles.nav_menu_item} to={el.path}>
+                  {el.page}
+                </Link>
               </li>
             );
           })}
         </ul>
-
         <button
           onClick={() => setIsOpen(!isOpen)}
           className={styles.nav_menu_button}

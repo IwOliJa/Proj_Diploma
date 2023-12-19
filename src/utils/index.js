@@ -1,8 +1,8 @@
 export const menulist = [
-  { page: "Main Page" },
-  { page: "Categories" },
-  { page: "All products" },
-  { page: "All sales" },
+  { page: "Main Page", path: "/" },
+  { page: "Categories", path: "/categories" },
+  { page: "All products", path: "/products" },
+  { page: "All sales", path: "/sales" },
 ];
 
 export const menulist2 = [
