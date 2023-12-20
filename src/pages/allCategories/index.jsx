@@ -4,15 +4,13 @@ import styles from "./index.module.css";
 import { menulist2 } from "../../utils/index.js";
 import { getCategories } from "../../store/slices/categoriesSlice";
 import { useEffect } from "react";
-import { useDispatch, useSelector } from "react-redux";
+import { useDispatch } from "react-redux";
 
 function AllCategories() {
   const dispatch = useDispatch;
   useEffect(() => {
     dispatch(getCategories());
   }, []);
-  const categories = useSelector((state) => state.categories.productsList);
-  console.log(categories);
   return (
     <div className={styles.main_container}>
       <div className={styles.buttons_wrapper}>

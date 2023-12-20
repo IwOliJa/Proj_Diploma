@@ -3,7 +3,9 @@ import styles from "./index.module.css";
 import { useSelector } from "react-redux";
 
 function CategoriesBlock() {
-  const categoriesList = useSelector((state) => state.categories);
+  const categoriesList = useSelector(
+    (state) => state.categories.categoriesList
+  );
   return (
     <div className={styles.categories_container}>
       {categoriesList.map((item) => {

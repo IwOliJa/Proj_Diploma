@@ -17,7 +17,7 @@ export const getCategories = createAsyncThunk(
 export const categoriesSlice = createSlice({
   name: "categories",
   initialState: {
-    productsList: [],
+    categoriesList: [],
     status: null,
   },
 
@@ -28,7 +28,7 @@ export const categoriesSlice = createSlice({
       })
       .addCase(getCategories.fulfilled, (state, action) => {
         state.status = "fulfilled";
-        state.productsList = action.payload;
+        state.categoriesList = action.payload;
       })
       .addCase(getCategories.rejected, (state, action) => {
         state.status = "rejected";
