@@ -1,16 +1,21 @@
 import CategoriesCards from "../categoriesCards/index";
 import styles from "./index.module.css";
-import { useSelector } from "react-redux";
+import { useSelector, useDispatch } from "react-redux";
+import { getCategories } from "../../store/slices/categoriesSlice";
+import { useEffect } from "react";
 
 function CategoriesBlock() {
-  const categoriesList = useSelector(
-    (state) => state.categories.categoriesList
-  );
+  const dispatch = useDispatch();
+  useEffect(() => {
+    dispatch(getCategories());
+  }, []);
+  const { categoriesList, status } = useSelector((state) => state.categories);
   return (
     <div className={styles.categories_container}>
-      {categoriesList.map((item) => {
-        return <CategoriesCards key={item.id} {...item} />;
-      })}
+      {status === "fulfilled" &&
+        categoriesList.map((item) => {
+          return <CategoriesCards key={item.id} {...item} />;
+        })}
     </div>
   );
 }

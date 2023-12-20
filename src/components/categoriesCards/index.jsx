@@ -5,7 +5,7 @@ function CategoriesCards({ image, title }) {
     <div className={styles.categories_wrapper}>
       <div className={styles.card_wrapper}>
         <button className={styles.image}>
-          <img src={image} alt={title} />
+          <img src={"http://localhost:3333" + image} alt={title} />
         </button>
         <p className={styles.card_name}>{title}</p>
       </div>
