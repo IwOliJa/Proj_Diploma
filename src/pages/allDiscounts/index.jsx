@@ -1,5 +1,5 @@
 import styles from "./index.module.css";
-import AllDiscountsBlock from "../../components/AllDiscountsBlock/index.jsx";
+import AllDiscountsBlock from "../../components/allDiscountsBlock/index.jsx";
 import ButtonNavMenu from "../../components/buttonsNavMenu/index.jsx";
 import { menulist5 } from "../../utils";
 import AllDiscountsSorting from "./allDiscountsSorting/AllDiscountsSorting.jsx";

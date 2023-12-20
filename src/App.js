@@ -12,12 +12,8 @@ import AllCategories from "./pages/allCategories/index.jsx";
 import MainPage from "./pages/mainPage/index.jsx";
 import { menulist } from "./utils/index.js";
 import { Routes, Route } from "react-router-dom";
-// import { useEffect } from "react";
 
 function App() {
-  // useEffect(() => {
-  //   fetch("http://localhost:3333/products/all");
-  // }, []);
   return (
     <div className="App">
       <Header menulist={menulist} />

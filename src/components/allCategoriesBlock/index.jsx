@@ -1,15 +1,14 @@
 import CategoriesCards from "../categoriesCards/index";
 import styles from "./index.module.css";
+import { useSelector } from "react-redux";
 
 function CategoriesBlock() {
-  const render = [1, 2];
+  const categoriesList = useSelector((state) => state.categories);
   return (
     <div className={styles.categories_container}>
-      {render.map((el) => {
-        return <CategoriesCards />;
+      {categoriesList.map((item) => {
+        return <CategoriesCards key={item.id} {...item} />;
       })}
-      {/* <CategoriesCards />
-      <CategoriesCards /> */}
     </div>
   );
 }
