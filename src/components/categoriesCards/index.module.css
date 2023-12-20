@@ -1,22 +1,11 @@
-.categories_wrapper {
-  padding: 5 rem;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 1.8rem;
-  font-size: 1.3rem;
-  color: #282828;
-  font-family: "Montserrat", sans-serif;
-}
-.card_wrapper {
+.cards_wrapper {
   width: 316px;
   height: auto;
   border-radius: 1rem;
-  background: center;
   text-align: center;
+  font-size: 1.3rem;
 }
-
-.image {
+.card_box {
   width: 100%;
   height: 350px;
   background-size: cover;
@@ -31,14 +20,9 @@
   margin-top: 1rem;
   margin-bottom: 1.4rem;
 }
-
-@media (max-width: 1024px) {
-  .categories_wrapper {
-    gap: 5rem;
-  }
-}
-@media (max-width: 768px) {
-  .categories_wrapper {
-    gap: 2rem;
-  }
+.image {
+  height: 108%;
+  position: relative;
+  bottom: 3%;
+  right: 50%;
 }
