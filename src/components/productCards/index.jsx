@@ -6,7 +6,7 @@ function ProductCards({ image, title, price, discount_price }) {
     <div className={styles.prodact_wrapper}>
       <div className={styles.card_wrapper}>
         <div className={styles.image}>
-          <img src={image} alt={title} />
+          <img src={"http//localhost:3333" + image} alt={title} />
         </div>
         <p className={styles.card_name}>{title}</p>
         <span className={styles.product_price}>{discount_price}</span>
