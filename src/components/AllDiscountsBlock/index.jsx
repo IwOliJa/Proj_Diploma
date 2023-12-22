@@ -1,11 +1,11 @@
 import styles from "./index.module.css";
-import ProdactCards from "../prodactCards";
+import ProductCards from "../productCards/index.jsx";
 
 function AllDiscountsBlock() {
   return (
     <div className={styles.prodacts_container}>
-      <ProdactCards />
-      <ProdactCards />
+      <ProductCards />
+      <ProductCards />
     </div>
   );
 }
