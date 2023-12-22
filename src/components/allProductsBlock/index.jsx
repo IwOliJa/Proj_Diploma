@@ -18,6 +18,7 @@ function AllProductsBlock() {
           console.log(productsList);
           return <ProductCards key={item.id} {...item} />;
         })}
+      {/* <ProductCards /> */}
     </div>
   );
 }
