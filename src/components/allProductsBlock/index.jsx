@@ -12,7 +12,7 @@ function AllProductsBlock() {
   const { productsList, status } = useSelector((state) => state.products);
   console.log(productsList);
   return (
-    <div className={styles.prodacts_container}>
+    <div className={styles.products_container}>
       {status === "fulfilled" &&
         productsList.map((item) => <ProductCards key={item.id} {...item} />)}
     </div>

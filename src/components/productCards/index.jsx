@@ -1,8 +1,6 @@
-import { useState } from "react";
 import styles from "./index.module.css";
 
 function ProductCards({ id, image, title, price, discont_price }) {
-  let currentPrice = { discont_price };
   return (
     <div className={styles.card_wrapper}>
       <div
@@ -14,11 +12,19 @@ function ProductCards({ id, image, title, price, discont_price }) {
         }}
       ></div>
       <p className={styles.card_name}>{title}</p>
-      <span className={styles.product_price}>${discont_price}</span>
-      <span className={styles.discount_item}>
-        ${price}
-        <span className={styles.delete_symbol}></span>
-      </span>
+      {discont_price !== null ? (
+        <span className={styles.product_price}>${discont_price}</span>
+      ) : (
+        <span className={styles.product_price}>${price}</span>
+      )}
+      {discont_price !== null ? (
+        <span className={styles.discount_item}>
+          ${price}
+          <span className={styles.delete_symbol}></span>
+        </span>
+      ) : (
+        <span className={styles.discount_item}></span>
+      )}
     </div>
   );
 }
