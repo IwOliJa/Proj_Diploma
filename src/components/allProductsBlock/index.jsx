@@ -13,12 +13,8 @@ function AllProductsBlock() {
   console.log(productsList);
   return (
     <div className={styles.prodacts_container}>
-      {status === "filfilled" &&
-        productsList.map((item) => {
-          console.log(productsList);
-          return <ProductCards key={item.id} {...item} />;
-        })}
-      {/* <ProductCards /> */}
+      {status === "fulfilled" &&
+        productsList.map((item) => <ProductCards key={item.id} {...item} />)}
     </div>
   );
 }

@@ -20,7 +20,7 @@ function App() {
       <Routes>
         <Route path="/" element={<MainPage />} />
         <Route path="/categories" element={<AllCategories />} />
-        <Route path="/categories/tools" element={<FromCategory />} />
+        <Route path="/categories/:id" element={<FromCategory />} />
         <Route path="/products" element={<AllProducts />} />
         <Route path="/sales" element={<AllDiscounts />} />
         <Route path="/products/:id" element={<ProductInfo />} />
