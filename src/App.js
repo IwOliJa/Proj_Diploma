@@ -8,19 +8,23 @@ import ProductInfo from "./pages/productInfo/index.jsx";
 import AllDiscounts from "./pages/allDiscounts/index.jsx";
 import AllProducts from "./pages/allProducts/index.jsx";
 import FromCategory from "./pages/fromCategory/index.jsx";
+// import FromSpecificCategory from "./pages/fromSpecificCategory/index.jsx";
 import AllCategories from "./pages/allCategories/index.jsx";
 import MainPage from "./pages/mainPage/index.jsx";
 import { menulist } from "./utils/index.js";
 import { Routes, Route } from "react-router-dom";
+import ScrollToTop from "./utils/index.js";
 
 function App() {
   return (
     <div className="App">
       <Header menulist={menulist} />
+      <ScrollToTop />
       <Routes>
         <Route path="/" element={<MainPage />} />
         <Route path="/categories" element={<AllCategories />} />
         <Route path="/categories/:id" element={<FromCategory />} />
+        {/* <Route path="/categories/:id" element={<FromSpecificCategory />} /> */}
         <Route path="/products" element={<AllProducts />} />
         <Route path="/sales" element={<AllDiscounts />} />
         <Route path="/products/:id" element={<ProductInfo />} />

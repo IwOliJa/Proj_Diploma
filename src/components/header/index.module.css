@@ -1,6 +1,7 @@
 .header {
   width: 100%;
   border: 1px solid #dddddd;
+  position: relative;
 }
 
 .nav_menu {
@@ -19,7 +20,6 @@
   width: 48px;
   height: 48px;
   margin-right: 2.5rem;
-  position: relative;
 }
 .items_counter {
   position: absolute;
@@ -120,6 +120,10 @@
     height: 38px;
     margin-right: 2.5rem;
   }
+  .items_counter {
+    right: 3.5rem;
+    padding: 0.4rem 0.5rem;
+  }
 }
 
 @media (max-width: 426px) {
@@ -149,6 +153,9 @@
   }
   .header_icon {
     margin-right: 1rem;
+  }
+  .items_counter {
+    right: 2.2rem;
   }
 }
 

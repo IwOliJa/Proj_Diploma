@@ -3,8 +3,20 @@ import ButtonNavMenu from "../../components/buttonsNavMenu";
 import FromCategoryBlock from "../../components/fromCategoryBlock";
 import { menulist3 } from "../../utils";
 import SortingFields from "../../components/sortingFields";
+import { useSelector, useDispatch } from "react-redux";
+import { getCategorySpecific } from "../../store/slices/fromCategorySlice";
+import { useEffect } from "react";
+import { useParams } from "react-router-dom";
 
 function FromCategory() {
+  const { id } = useParams();
+  const dispatch = useDispatch(id);
+  useEffect(() => {
+    dispatch(getCategorySpecific(id));
+  }, []);
+  const { categoryData, status } = useSelector((state) => state.category);
+  // console.log(categoryData.category);
+
   return (
     <div className={styles.main_container}>
       <div className={styles.buttons_wrapper}>
@@ -16,7 +28,11 @@ function FromCategory() {
           );
         })}
       </div>
-      <p className={styles.container_header}>Tools and equipment</p>
+      {status === "fulfilled" && (
+        <h3 className={styles.container_header}>
+          {categoryData.category.title}
+        </h3>
+      )}
       <SortingFields />
       <FromCategoryBlock />
     </div>

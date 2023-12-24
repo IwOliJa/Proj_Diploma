@@ -2,9 +2,11 @@ import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
 
 export const getCategorySpecific = createAsyncThunk(
   "category/getCategorySpecific",
-  async () => {
+  async (categoryId) => {
     try {
-      const response = await fetch("http://localhost:3333/categories/all");
+      const response = await fetch(
+        `http://localhost:3333/categories/${categoryId}`
+      );
       const data = await response.json();
       return data;
     } catch (error) {
@@ -16,7 +18,7 @@ export const getCategorySpecific = createAsyncThunk(
 export const fromCategorySlice = createSlice({
   name: "category",
   initialState: {
-    categoryData: [],
+    categoryData: {},
     status: null,
   },
 
@@ -28,7 +30,6 @@ export const fromCategorySlice = createSlice({
       .addCase(getCategorySpecific.fulfilled, (state, action) => {
         state.status = "fulfilled";
         state.categoryData = action.payload;
-        console.log(action.payload);
       })
       .addCase(getCategorySpecific.rejected, (state, action) => {
         state.status = "rejected";

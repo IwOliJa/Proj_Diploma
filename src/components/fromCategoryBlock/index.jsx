@@ -3,20 +3,22 @@ import ProductCards from "../productCards/index.jsx";
 import { useSelector, useDispatch } from "react-redux";
 import { getCategorySpecific } from "../../store/slices/fromCategorySlice";
 import { useEffect } from "react";
+import { useParams } from "react-router-dom";
 
 function FromCategoryBlock() {
-  const dispatch = useDispatch();
+  const { id } = useParams();
+  const dispatch = useDispatch(id);
   useEffect(() => {
-    dispatch(getCategorySpecific());
+    dispatch(getCategorySpecific(id));
   }, []);
   const { categoryData, status } = useSelector((state) => state.category);
-  console.log(categoryData);
+  //   console.log(categoryData.data);
   return (
-    <div className={styles.prodacts_container}>
-      <div className={styles.products_container}>
-        {status === "fulfilled" &&
-          categoryData.map((item) => <ProductCards key={item.id} {...item} />)}
-      </div>
+    <div className={styles.products_container}>
+      {status === "fulfilled" &&
+        categoryData.data.map((item) => (
+          <ProductCards key={item.id} {...item} />
+        ))}
     </div>
   );
 }
