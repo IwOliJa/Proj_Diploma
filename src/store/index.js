@@ -1,10 +1,14 @@
 import { configureStore } from "@reduxjs/toolkit";
-import categoriesReduser from "./slices/categoriesSlice.js";
-import allProductsReduser from "./slices/allProductsSlice.js";
+import categoriesReducer from "./slices/categoriesSlice.js";
+import allProductsReducer from "./slices/allProductsSlice.js";
+import fromCategoryReducer from "./slices/fromCategorySlice.js";
+import allDiscountsReducer from "./slices/allDiscountsSlice.js";
 
 export default configureStore({
   reducer: {
-    products: allProductsReduser,
-    categories: categoriesReduser,
+    discounts: allDiscountsReducer,
+    category: fromCategoryReducer,
+    products: allProductsReducer,
+    categories: categoriesReducer,
   },
 });

@@ -31,3 +31,5 @@ export const menulist6 = [
   { id: 3, item: "Tools and equipment" },
   { id: 4, item: "Secateurs" },
 ];
+
+export const main_url = "http://localhost:3333";
