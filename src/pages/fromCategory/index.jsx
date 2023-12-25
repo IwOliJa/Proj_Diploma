@@ -15,8 +15,7 @@ function FromCategory() {
     dispatch(getCategorySpecific(id));
   }, []);
   const { categoryData, status } = useSelector((state) => state.category);
-  // console.log(categoryData.category);
-
+  console.log(menulist3);
   return (
     <div className={styles.main_container}>
       <div className={styles.buttons_wrapper}>

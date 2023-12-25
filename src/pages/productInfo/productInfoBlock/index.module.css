@@ -5,7 +5,7 @@
   justify-content: space-between;
 }
 .images_content {
-  width: 58%;
+  width: 57%;
   height: auto;
   display: flex;
   justify-content: space-between;
@@ -13,7 +13,7 @@
 .content_small {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  gap: 2rem;
 }
 
 .small_card {
@@ -25,13 +25,9 @@
 }
 
 .big_card {
-  width: auto;
+  width: 70%;
   margin-right: 12%;
-}
-
-.big_card > img {
-  width: 100%;
-  height: auto;
+  border-radius: 0.8rem;
 }
 
 .info_content {
@@ -64,6 +60,18 @@
   right: 0;
   width: 100%;
   border: solid 1px #8b8b8b;
+}
+.discont_percent {
+  position: absolute;
+  width: 4rem;
+  height: 2.1rem;
+  background-color: #339933;
+  padding-top: 0.3rem;
+  border-radius: 0.3rem;
+  font-size: 1.2rem;
+  font-weight: 600;
+  text-align: center;
+  color: #ffffff;
 }
 .counting_filds {
   display: flex;
