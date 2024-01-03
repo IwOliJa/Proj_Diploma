@@ -1,6 +1,6 @@
 import styles from "./index.module.css";
 import CategoriesTitle from "./catigoriesTitle";
-import CategoriesCards from "../categoriesCards";
+import CategoriesCards from "../categoriesCards/index";
 import { useSelector, useDispatch } from "react-redux";
 import { getCategories } from "../../store/slices/categoriesSlice";
 import { useEffect } from "react";

@@ -16,7 +16,7 @@ function MainSale() {
       <SaleTitle />
       <div className={styles.categories_container}>
         {status === "fulfilled" &&
-          discountsList.slice(0, 4).map((item) => {
+          discountsList.slice(0, 4).map((item, ind) => {
             return <ProductCards key={item.id} {...item} />;
           })}
       </div>

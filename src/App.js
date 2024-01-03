@@ -23,9 +23,11 @@ function App() {
         <Route path="/" element={<MainPage />} />
         <Route path="/categories" element={<AllCategories />} />
         <Route path="/categories/:id" element={<FromCategory />} />
+        <Route path="/categories/:id/:id" element={<ProductInfo />} />
         <Route path="/products" element={<AllProducts />} />
-        <Route path="/sales" element={<AllDiscounts />} />
         <Route path="/products/:id" element={<ProductInfo />} />
+        <Route path="/sales" element={<AllDiscounts />} />
+        <Route path="/sales/:id" element={<ProductInfo />} />
         <Route path="/shoppings" element={<CartShopping />} />
         <Route path="/cart" element={<CartEmpty />} />
         <Route path="*" element={<NotFoundPage />} />

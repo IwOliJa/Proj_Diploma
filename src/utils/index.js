@@ -31,8 +31,8 @@ export const menulist5 = [
 export const menulist6 = [
   { id: 1, item: "Main Page" },
   { id: 2, item: "Categories" },
-  { id: 3, item: "Tools and equipment" },
-  { id: 4, item: "Secateurs" },
+  { id: 3, item: "" },
+  { id: 4, item: "" },
 ];
 
 export const main_url = "http://localhost:3333";

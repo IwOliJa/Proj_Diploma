@@ -6,6 +6,7 @@ export const getDiscounts = createAsyncThunk(
     try {
       const response = await fetch("http://localhost:3333/products/all");
       const data = await response.json();
+      // return data;
       return data.filter((el) => el.discont_price !== null);
     } catch (error) {
       console.log(error);

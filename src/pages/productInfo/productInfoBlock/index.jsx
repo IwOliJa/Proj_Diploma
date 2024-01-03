@@ -8,7 +8,6 @@ function ProducktInfoBlock({
   discont_price,
   description,
 }) {
-  console.log(title);
   return (
     <div className={styles.content_wrapper}>
       <div className={styles.images_content}>
