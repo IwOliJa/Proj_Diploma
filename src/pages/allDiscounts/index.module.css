@@ -13,7 +13,7 @@
   font-weight: 500;
 }
 
-.hr {
+/* .hr {
   position: absolute;
   width: 1.5rem;
   margin-top: 1.1rem;
@@ -22,7 +22,7 @@
 }
 .hr {
   left: 120px;
-}
+} */
 
 @media (max-width: 1024px) {
   .container_header {

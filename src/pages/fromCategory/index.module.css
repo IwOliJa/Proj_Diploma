@@ -15,7 +15,7 @@
   font-weight: 500;
 }
 
-.hr,
+/* .hr,
 .hr2 {
   position: absolute;
   width: 1.5rem;
@@ -29,7 +29,7 @@
 }
 .hr2 {
   left: 265px;
-}
+} */
 
 @media (max-width: 1024px) {
   .container_header {

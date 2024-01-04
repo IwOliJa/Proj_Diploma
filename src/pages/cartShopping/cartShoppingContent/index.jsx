@@ -1,7 +1,12 @@
 import styles from "./index.module.css";
 import { VscChromeClose } from "react-icons/vsc";
+import { useSelector, useDispatch } from "react-redux";
+import { plus, minus } from "../../../store/slices/cartSchoppingSlice.js";
 
 function CartShoppingContent() {
+  const dispatch = useDispatch();
+  const { count } = useSelector((state) => state.counter);
+
   return (
     <div className={styles.content_wrapper}>
       <div className={styles.items_wrapper}>
@@ -17,9 +22,19 @@ function CartShoppingContent() {
               </span>
             </p>
             <div className={styles.item_counter}>
-              <button className={styles.count_button}>-</button>
-              <div className={styles.count_data}>0</div>
-              <button className={styles.count_button}>+</button>
+              <button
+                onClick={() => dispatch(minus())}
+                className={styles.count_button}
+              >
+                -
+              </button>
+              <div className={styles.count_data}>{count}</div>
+              <button
+                onClick={() => dispatch(plus())}
+                className={styles.count_button}
+              >
+                +
+              </button>
             </div>
             <div className={styles.item_price}>
               <span className={styles.product_price}>$155</span>
@@ -29,7 +44,7 @@ function CartShoppingContent() {
             </div>
           </div>
         </div>
-        <div className={styles.item_content}>
+        {/* <div className={styles.item_content}>
           <div className={styles.image_container}>
             <img src="#" alt=" Secateurs" />
           </div>
@@ -52,8 +67,8 @@ function CartShoppingContent() {
               </span>
             </div>
           </div>
-        </div>
-        <div className={styles.item_content}>
+        </div> */}
+        {/* <div className={styles.item_content}>
           <div className={styles.image_container}>
             <img src="#" alt=" Secateurs" />
           </div>
@@ -76,7 +91,7 @@ function CartShoppingContent() {
               </span>
             </div>
           </div>
-        </div>
+        </div> */}
       </div>
 
       <div className={styles.form_wrapper}>

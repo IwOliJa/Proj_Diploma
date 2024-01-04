@@ -8,7 +8,7 @@ function AllDiscounts() {
   return (
     <div className={styles.main_container}>
       <div className={styles.buttons_wrapper}>
-        <span className={styles.hr}></span>
+        {/* <span className={styles.hr}></span> */}
         {menulist5.map((item) => {
           return (
             <ButtonNavMenu key={item.id} {...item} length={menulist5.length} />

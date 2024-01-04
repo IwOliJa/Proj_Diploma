@@ -4,9 +4,11 @@ import allProductsReducer from "./slices/allProductsSlice.js";
 import fromCategoryReducer from "./slices/fromCategorySlice.js";
 import allDiscountsReducer from "./slices/allDiscountsSlice.js";
 import productInfoReducer from "./slices/productInfoSlice.js";
+import countReducer from "./slices/cartSchoppingSlice.js";
 
 export default configureStore({
   reducer: {
+    counter: countReducer,
     product: productInfoReducer,
     discounts: allDiscountsReducer,
     category: fromCategoryReducer,
