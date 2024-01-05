@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 function CategoriesCards({ image, title, id }) {
   return (
-    <Link to={`${id}`} style={{ textDecoration: "none" }}>
+    <Link to={`/categories/${id}`} style={{ textDecoration: "none" }}>
       <div className={styles.cards_wrapper}>
         <div className={styles.card_box}>
           <img

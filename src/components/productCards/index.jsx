@@ -7,7 +7,7 @@ function ProductCards({ id, image, title, price, discont_price }) {
   const dispatch = useDispatch();
   return (
     <div className={styles.card_wrapper}>
-      <Link className={styles.card_link} to={`${id}`}>
+      <Link className={styles.card_link} to={`/products/${id}`}>
         <div
           className={styles.image}
           key={id}

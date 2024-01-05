@@ -9,7 +9,7 @@ import { useSelector } from "react-redux";
 
 function Header({ menulist }) {
   const { cart } = useSelector((state) => state.schoppingCart);
-  console.log(cart.lenght);
+  console.log(cart);
   const [isOpen, setIsOpen] = useState(false);
 
   return (
@@ -44,7 +44,7 @@ function Header({ menulist }) {
         </button>
         <Link to="/shoppings">
           <img className={styles.header_icon} src={icon} alt="icon" />
-          <span className={styles.items_counter}>{cart.lenght}</span>
+          <span className={styles.items_counter}>{cart.length}</span>
         </Link>
       </nav>
     </div>

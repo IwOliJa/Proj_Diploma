@@ -8,7 +8,6 @@ function AllProducts() {
   return (
     <div className={styles.main_container}>
       <div className={styles.buttons_wrapper}>
-        {/* <span className={styles.hr}></span> */}
         {menulist4.map((item) => {
           return (
             <ButtonNavMenu key={item.id} {...item} length={menulist4.length} />

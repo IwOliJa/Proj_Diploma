@@ -15,12 +15,11 @@ function FromCategory() {
     dispatch(getCategorySpecific(id));
   }, []);
   const { categoryData, status } = useSelector((state) => state.category);
+  // console.log(categoryData.category);
   console.log(menulist3);
   return (
     <div className={styles.main_container}>
       <div className={styles.buttons_wrapper}>
-        {/* <span className={styles.hr}></span>
-        <span className={styles.hr2}></span> */}
         {menulist3.map((item) => {
           return (
             <ButtonNavMenu key={item.id} {...item} length={menulist3.length} />
