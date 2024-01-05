@@ -39,8 +39,10 @@ function Header({ menulist }) {
         >
           {isOpen ? <VscChromeClose size="30" /> : <VscMenu size="30" />}
         </button>
-        <img className={styles.header_icon} src={icon} alt="icon" />
-        <span className={styles.items_counter}>12</span>
+        <Link to="/shoppings">
+          <img className={styles.header_icon} src={icon} alt="icon" />
+          <span className={styles.items_counter}>12</span>
+        </Link>
       </nav>
     </div>
   );

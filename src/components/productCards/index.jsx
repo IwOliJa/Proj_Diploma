@@ -13,6 +13,8 @@ function ProductCards({ id, image, title, price, discont_price }) {
             backgroundSize: "cover",
           }}
         ></div>
+        <span className={styles.discount_percent}>-xx%</span>
+        <button className={styles.adding_btn}>Add to cart</button>
         <p className={styles.card_name}>{title}</p>
         {discont_price !== null ? (
           <span className={styles.product_price}>${discont_price}</span>
