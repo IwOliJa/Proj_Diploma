@@ -1,10 +1,13 @@
 import styles from "./index.module.css";
 import { Link } from "react-router-dom";
+import { useDispatch } from "react-redux";
+import { addToCart } from "../../store/slices/cartSlice";
 
 function ProductCards({ id, image, title, price, discont_price }) {
+  const dispatch = useDispatch();
   return (
-    <Link to={`${id}`} style={{ textDecoration: "none" }}>
-      <div className={styles.card_wrapper}>
+    <div className={styles.card_wrapper}>
+      <Link className={styles.card_link} to={`${id}`}>
         <div
           className={styles.image}
           key={id}
@@ -14,7 +17,6 @@ function ProductCards({ id, image, title, price, discont_price }) {
           }}
         ></div>
         <span className={styles.discount_percent}>-xx%</span>
-        <button className={styles.adding_btn}>Add to cart</button>
         <p className={styles.card_name}>{title}</p>
         {discont_price !== null ? (
           <span className={styles.product_price}>${discont_price}</span>
@@ -29,8 +31,16 @@ function ProductCards({ id, image, title, price, discont_price }) {
         ) : (
           <span className={styles.discount_item}></span>
         )}
-      </div>
-    </Link>
+      </Link>
+      <button
+        className={styles.adding_btn}
+        onClick={() =>
+          dispatch(addToCart({ id, image, title, price, discont_price }))
+        }
+      >
+        Add to cart
+      </button>
+    </div>
   );
 }
 

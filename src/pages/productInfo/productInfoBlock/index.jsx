@@ -1,4 +1,6 @@
 import styles from "./index.module.css";
+import { useDispatch } from "react-redux";
+import { addToCart } from "../../../store/slices/cartSlice";
 
 function ProducktInfoBlock({
   id,
@@ -8,6 +10,7 @@ function ProducktInfoBlock({
   discont_price,
   description,
 }) {
+  const dispatch = useDispatch();
   return (
     <div className={styles.content_wrapper}>
       <div className={styles.images_content}>
@@ -66,7 +69,14 @@ function ProducktInfoBlock({
           <button className={styles.count_button}>-</button>
           <div className={styles.count_data}>0</div>
           <button className={styles.count_button}>+</button>
-          <button className={styles.adding_button}>Add to cart</button>
+          <button
+            className={styles.adding_button}
+            onClick={() =>
+              dispatch(addToCart({ id, image, title, price, discont_price }))
+            }
+          >
+            Add to cart
+          </button>
         </div>
         <div className={styles.description}>
           <p className={styles.heading}>Description</p>

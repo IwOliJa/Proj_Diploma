@@ -1,10 +1,12 @@
 import styles from "./index.module.css";
 import { VscChromeClose } from "react-icons/vsc";
 import { useSelector, useDispatch } from "react-redux";
-import { plus, minus } from "../../../store/slices/cartSchoppingSlice.js";
+import { plus, minus } from "../../../store/slices/countSchoppingSlice.js";
 
 function CartShoppingContent() {
   const dispatch = useDispatch();
+  const { cart } = useSelector((state) => state.schoppingCart);
+
   const { count } = useSelector((state) => state.counter);
 
   return (
@@ -12,11 +14,11 @@ function CartShoppingContent() {
       <div className={styles.items_wrapper}>
         <div className={styles.item_content}>
           <div className={styles.image_container}>
-            <img src="#" alt=" Secateurs" />
+            <img src="" alt="" />
           </div>
           <div className={styles.shopping_counter}>
             <p className={styles.product_name}>
-              Secateurs
+              fxgghm
               <span>
                 <VscChromeClose size="25px" />
               </span>
@@ -44,54 +46,6 @@ function CartShoppingContent() {
             </div>
           </div>
         </div>
-        {/* <div className={styles.item_content}>
-          <div className={styles.image_container}>
-            <img src="#" alt=" Secateurs" />
-          </div>
-          <div className={styles.shopping_counter}>
-            <p className={styles.product_name}>
-              Secateurs
-              <span>
-                <VscChromeClose size="25px" />
-              </span>
-            </p>
-            <div className={styles.item_counter}>
-              <button className={styles.count_button}>-</button>
-              <div className={styles.count_data}>0</div>
-              <button className={styles.count_button}>+</button>
-            </div>
-            <div className={styles.item_price}>
-              <span className={styles.product_price}>$155</span>
-              <span className={styles.discount_item}>
-                $240 <span className={styles.delete_symbol}></span>
-              </span>
-            </div>
-          </div>
-        </div> */}
-        {/* <div className={styles.item_content}>
-          <div className={styles.image_container}>
-            <img src="#" alt=" Secateurs" />
-          </div>
-          <div className={styles.shopping_counter}>
-            <h3 className={styles.product_name}>
-              Secateurs
-              <span>
-                <VscChromeClose size="25px" />
-              </span>
-            </h3>
-            <div className={styles.item_counter}>
-              <button className={styles.count_button}>-</button>
-              <div className={styles.count_data}>0</div>
-              <button className={styles.count_button}>+</button>
-            </div>
-            <div className={styles.item_price}>
-              <span className={styles.product_price}>$155</span>
-              <span className={styles.discount_item}>
-                $240 <span className={styles.delete_symbol}></span>
-              </span>
-            </div>
-          </div>
-        </div> */}
       </div>
 
       <div className={styles.form_wrapper}>
