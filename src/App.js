@@ -1,7 +1,6 @@
 import "./App.css";
 import Footer from "./components/footer/index.jsx";
 import Header from "./components/header/index.jsx";
-import CartEmpty from "./pages/cartEmpty/index.jsx";
 import NotFoundPage from "./pages/notFound/index.jsx";
 import CartShopping from "./pages/cartShopping/index.jsx";
 import ProductInfo from "./pages/productInfo/index.jsx";
@@ -27,7 +26,6 @@ function App() {
         <Route path="/products/:id" element={<ProductInfo />} />
         <Route path="/sales" element={<AllDiscounts />} />
         <Route path="/shoppings" element={<CartShopping />} />
-        {/* <Route path="/cart" element={<CartEmpty />} /> */}
         <Route path="*" element={<NotFoundPage />} />
       </Routes>
       <Footer />

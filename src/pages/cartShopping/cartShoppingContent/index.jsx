@@ -2,19 +2,42 @@ import styles from "./index.module.css";
 import { VscChromeClose } from "react-icons/vsc";
 import { useSelector, useDispatch } from "react-redux";
 import { plus, minus } from "../../../store/slices/countSchoppingSlice.js";
+import {
+  incrementCount,
+  decrementCount,
+  removeFromCart,
+  postOrder,
+} from "../../../store/slices/cartSlice.js";
 
 function CartShoppingContent() {
   const dispatch = useDispatch();
   const { cart } = useSelector((state) => state.schoppingCart);
-  console.log(cart);
 
   const { count } = useSelector((state) => state.counter);
+
+  function hasDiscountPrice(discont_price) {
+    return discont_price !== null;
+  }
+
+  const totalAmount = cart.reduce((sum, item) => {
+    const itemPrice = hasDiscountPrice(item.discont_price)
+      ? item.discont_price
+      : item.price;
+    return sum + itemPrice * item.count;
+  }, 0);
+
+  const totalCount = cart.reduce((sum, item) => sum + item.count, 0);
 
   return (
     <>
       <div className={styles.content_wrapper}>
         <div className={styles.items_wrapper}>
           {cart.map((item) => {
+            const price = hasDiscountPrice(item.discont_price)
+              ? item.discont_price
+              : item.price;
+            const discont_price = hasDiscountPrice && item.price;
+
             return (
               <div className={styles.item_content}>
                 <div className={styles.image_container}>
@@ -27,29 +50,34 @@ function CartShoppingContent() {
                 <div className={styles.shopping_counter}>
                   <p className={styles.product_name}>
                     {item.title}
-                    <span>
+                    <span
+                      onClick={() => dispatch(removeFromCart({ id: item.id }))}
+                    >
                       <VscChromeClose size="25px" />
                     </span>
                   </p>
                   <div className={styles.item_counter}>
                     <button
-                      onClick={() => dispatch(minus())}
+                      onClick={() => dispatch(decrementCount({ id: item.id }))}
                       className={styles.count_button}
                     >
                       -
                     </button>
-                    <div className={styles.count_data}>{count}</div>
+                    <div className={styles.count_data}>{item.count}</div>
                     <button
-                      onClick={() => dispatch(plus())}
+                      onClick={() => dispatch(incrementCount({ id: item.id }))}
                       className={styles.count_button}
                     >
                       +
                     </button>
                   </div>
                   <div className={styles.item_price}>
-                    <span className={styles.product_price}>$155</span>
+                    <span className={styles.product_price}>
+                      ${(price * item.count).toFixed(2)}
+                    </span>
                     <span className={styles.discount_item}>
-                      $240 <span className={styles.delete_symbol}></span>
+                      ${(discont_price * item.count).toFixed(2)}
+                      <span className={styles.delete_symbol}></span>
                     </span>
                   </div>
                 </div>
@@ -60,18 +88,33 @@ function CartShoppingContent() {
         <div className={styles.form_wrapper}>
           <h3 className={styles.form_title}>Order details</h3>
           <p className={styles.text}>
-            <span>3</span>items
+            <span>{totalCount}</span>items
           </p>
           <div className={styles.price_wrapper}>
             <p className={styles.text}>Total</p>
-            <span className={styles.total_price}>$541,00</span>
+            <span className={styles.total_price}>${totalAmount}</span>
           </div>
 
           <form className={styles.form_content}>
             <input type="text" placeholder="Name" />
             <input type="text" placeholder="Phone number" />
             <input type="text" placeholder="Email" />
-            <button className={styles.form_button}>Order</button>
+            <button
+              className={styles.form_button}
+              onClick={(e) => {
+                e.preventDefault();
+
+                dispatch(postOrder(cart))
+                  .then((result) => {
+                    console.log("Server response:", result);
+                  })
+                  .catch((error) => {
+                    console.error("Error:", error);
+                  });
+              }}
+            >
+              Order
+            </button>
           </form>
         </div>
       </div>

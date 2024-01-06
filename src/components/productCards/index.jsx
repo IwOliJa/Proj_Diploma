@@ -5,6 +5,10 @@ import { addToCart } from "../../store/slices/cartSlice";
 
 function ProductCards({ id, image, title, price, discont_price }) {
   const dispatch = useDispatch();
+
+  const discountPercent = Math.ceil(((price - discont_price) / price) * 100);
+  const hasDiscountPrice = discont_price !== null;
+
   return (
     <div className={styles.card_wrapper}>
       <Link className={styles.card_link} to={`/products/${id}`}>
@@ -16,26 +20,26 @@ function ProductCards({ id, image, title, price, discont_price }) {
             backgroundSize: "cover",
           }}
         ></div>
-        <span className={styles.discount_percent}>-xx%</span>
-        <p className={styles.card_name}>{title}</p>
-        {discont_price !== null ? (
-          <span className={styles.product_price}>${discont_price}</span>
-        ) : (
-          <span className={styles.product_price}>${price}</span>
+        {hasDiscountPrice && (
+          <span className={styles.discount_percent}>-{discountPercent}%</span>
         )}
-        {discont_price !== null ? (
+        <p className={styles.card_name}>{title}</p>
+        <span className={styles.product_price}>
+          ${hasDiscountPrice ? discont_price : price}
+        </span>
+        {hasDiscountPrice && (
           <span className={styles.discount_item}>
             ${price}
             <span className={styles.delete_symbol}></span>
           </span>
-        ) : (
-          <span className={styles.discount_item}></span>
         )}
       </Link>
       <button
         className={styles.adding_btn}
         onClick={() =>
-          dispatch(addToCart({ id, image, title, price, discont_price }))
+          dispatch(
+            addToCart({ id, image, title, price, discont_price, count: 1 })
+          )
         }
       >
         Add to cart

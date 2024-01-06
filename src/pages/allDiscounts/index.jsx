@@ -1,8 +1,10 @@
-import styles from "./index.module.css";
+import { menulist5 } from "../../utils";
+
 import AllDiscountsBlock from "../../components/allDiscountsBlock/index.jsx";
 import ButtonNavMenu from "../../components/buttonsNavMenu/index.jsx";
-import { menulist5 } from "../../utils";
-import AllDiscountsSorting from "./allDiscountsSorting/AllDiscountsSorting.jsx";
+import AllDiscountsSorting from "./allDiscountsSorting/index.jsx";
+
+import styles from "./index.module.css";
 
 function AllDiscounts() {
   return (

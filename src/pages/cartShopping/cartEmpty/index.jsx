@@ -1,10 +1,8 @@
-import CartShoppingTitle from "../cartShopping/cartShoppingTitle";
 import styles from "./index.module.css";
 
 function CartEmpty() {
   return (
     <div className={styles.main_container}>
-      <CartShoppingTitle />
       <p className={styles.message}>
         Looks like you have no items in your basket currently
       </p>

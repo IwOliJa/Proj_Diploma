@@ -20,7 +20,6 @@ function MainSale() {
       <div className={styles.categories_container}>
         {status === "fulfilled" &&
           productsList
-
             .filter((el) => el.discont_price !== null)
             .slice(0, 4)
             .map((item, ind) => {
