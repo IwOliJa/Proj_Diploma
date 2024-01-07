@@ -12,7 +12,6 @@ function FromCategoryBlock() {
     dispatch(getCategorySpecific(id));
   }, []);
   const { categoryData, status } = useSelector((state) => state.category);
-  //   console.log(categoryData.data);
   return (
     <div className={styles.products_container}>
       {status === "fulfilled" &&

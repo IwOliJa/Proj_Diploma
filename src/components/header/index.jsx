@@ -47,6 +47,7 @@ function Header({ menulist }) {
           <span className={styles.items_counter}>{cart.length}</span>
         </Link>
       </nav>
+      <div className={styles.hr}></div>
     </div>
   );
 }

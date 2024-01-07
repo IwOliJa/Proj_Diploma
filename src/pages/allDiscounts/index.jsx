@@ -46,10 +46,10 @@ function AllDiscounts() {
       }
 
       if (filter.sortOrder === "price_low") {
-        filteredList.sort((a, b) => a.price - b.price);
+        filteredList.sort((a, b) => a.discont_price - b.discont_price);
       }
       if (filter.sortOrder === "price_high") {
-        filteredList.sort((a, b) => b.price - a.price);
+        filteredList.sort((a, b) => b.discont_price - a.discont_price);
       }
 
       setFilterProducts(filteredList);
@@ -71,9 +71,9 @@ function AllDiscounts() {
       <SortingFields {...{ filter, setFilter }} hideDiscountButton={true} />
       <div className={styles.products_container}>
         {status === "fulfilled" &&
-          filterProducts.map((item) => (
-            <ProductCards key={item.id} {...item} />
-          ))}
+          filterProducts
+            .filter((el) => el.discont_price !== null)
+            .map((item) => <ProductCards key={item.id} {...item} />)}
       </div>
     </div>
   );

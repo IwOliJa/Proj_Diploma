@@ -1,7 +1,6 @@
 import styles from "./index.module.css";
 import { VscChromeClose } from "react-icons/vsc";
 import { useSelector, useDispatch } from "react-redux";
-import { plus, minus } from "../../../store/slices/countSchoppingSlice.js";
 import {
   incrementCount,
   decrementCount,
@@ -12,8 +11,6 @@ import {
 function CartShoppingContent() {
   const dispatch = useDispatch();
   const { cart } = useSelector((state) => state.schoppingCart);
-
-  const { count } = useSelector((state) => state.counter);
 
   function hasDiscountPrice(discont_price) {
     return discont_price !== null;
@@ -92,7 +89,9 @@ function CartShoppingContent() {
           </p>
           <div className={styles.price_wrapper}>
             <p className={styles.text}>Total</p>
-            <span className={styles.total_price}>${totalAmount}</span>
+            <span className={styles.total_price}>
+              ${totalAmount.toFixed(2)}
+            </span>
           </div>
 
           <form className={styles.form_content}>

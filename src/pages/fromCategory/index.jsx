@@ -1,7 +1,6 @@
 import styles from "./index.module.css";
 import ButtonNavMenu from "../../components/buttonsNavMenu";
 import FromCategoryBlock from "../../components/fromCategoryBlock";
-import SortingFields from "../../components/sortingFields";
 import { useSelector, useDispatch } from "react-redux";
 import { getCategorySpecific } from "../../store/slices/fromCategorySlice";
 import { useEffect, useMemo } from "react";
@@ -37,7 +36,6 @@ function FromCategory() {
           {categoryData.category.title}
         </h3>
       )}
-      {/* <SortingFields /> */}
       <FromCategoryBlock />
     </div>
   );

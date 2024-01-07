@@ -62,12 +62,13 @@ function ProducktInfoBlock({
         <p className={styles.product_name}>{title}</p>
 
         <span className={styles.product_price}>
-          ${hasDiscountsPrice ? discont_price : price}
+          ${hasDiscountsPrice ? (discont_price * count).toFixed(2) : price}
         </span>
 
         {hasDiscountsPrice && (
           <span className={styles.discount_item}>
-            ${price} <span className={styles.delete_symbol}></span>
+            ${(price * count).toFixed(2)}
+            <span className={styles.delete_symbol}></span>
             <span className={styles.discont_percent}>{discountPercent}%</span>
           </span>
         )}

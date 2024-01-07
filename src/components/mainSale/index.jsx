@@ -22,7 +22,7 @@ function MainSale() {
           productsList
             .filter((el) => el.discont_price !== null)
             .slice(0, 4)
-            .map((item, ind) => {
+            .map((item) => {
               return <ProductCards key={item.id} {...item} />;
             })}
       </div>

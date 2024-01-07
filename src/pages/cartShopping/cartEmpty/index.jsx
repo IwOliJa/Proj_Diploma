@@ -1,4 +1,5 @@
 import styles from "./index.module.css";
+import { Link } from "react-router-dom";
 
 function CartEmpty() {
   return (
@@ -6,7 +7,9 @@ function CartEmpty() {
       <p className={styles.message}>
         Looks like you have no items in your basket currently
       </p>
-      <button className={styles.continue_button}>Continue Schopping</button>
+      <Link to="/products">
+        <button className={styles.continue_button}>Continue Schopping</button>
+      </Link>
     </div>
   );
 }

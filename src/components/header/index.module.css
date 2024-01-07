@@ -1,7 +1,10 @@
 .header {
   width: 100%;
-  border: 1px solid #dddddd;
+  /* border: 1px solid #dddddd; */
   position: relative;
+}
+.hr {
+  border: solid 1px #dddddd;
 }
 
 .nav_menu {
