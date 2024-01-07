@@ -1,12 +1,63 @@
 import { menulist5 } from "../../utils";
 
-import AllDiscountsBlock from "../../components/allDiscountsBlock/index.jsx";
+import ProductCards from "../../components/productCards/index.jsx";
 import ButtonNavMenu from "../../components/buttonsNavMenu/index.jsx";
-import AllDiscountsSorting from "./allDiscountsSorting/index.jsx";
 
 import styles from "./index.module.css";
+import SortingFields from "../../components/sortingFields/index.jsx";
+import { useSelector } from "react-redux";
+import { useEffect, useState } from "react";
 
 function AllDiscounts() {
+  const { productsList, status } = useSelector((state) => state.products);
+  const [filterProducts, setFilterProducts] = useState(productsList);
+
+  const [filter, setFilter] = useState({
+    minPrice: "",
+    maxPrice: "",
+    showDiscount: true,
+    sortOrder: "default",
+  });
+
+  useEffect(() => {
+    const filterProducts = () => {
+      let filteredList = [...productsList];
+
+      if (filter.minPrice !== "") {
+        filteredList = filteredList.filter((product) => {
+          const price =
+            product.discont_price !== null
+              ? product.discont_price
+              : product.price;
+
+          return price >= parseInt(filter.minPrice);
+        });
+      }
+
+      if (filter.maxPrice !== "") {
+        filteredList = filteredList.filter((product) => {
+          const price =
+            product.discont_price !== null
+              ? product.discont_price
+              : product.price;
+
+          return price <= parseInt(filter.maxPrice);
+        });
+      }
+
+      if (filter.sortOrder === "price_low") {
+        filteredList.sort((a, b) => a.price - b.price);
+      }
+      if (filter.sortOrder === "price_high") {
+        filteredList.sort((a, b) => b.price - a.price);
+      }
+
+      setFilterProducts(filteredList);
+    };
+
+    filterProducts();
+  }, [filter, productsList]);
+
   return (
     <div className={styles.main_container}>
       <div className={styles.buttons_wrapper}>
@@ -17,8 +68,13 @@ function AllDiscounts() {
         })}
       </div>
       <p className={styles.container_header}>Discounted items</p>
-      <AllDiscountsSorting />
-      <AllDiscountsBlock />
+      <SortingFields {...{ filter, setFilter }} hideDiscountButton={true} />
+      <div className={styles.products_container}>
+        {status === "fulfilled" &&
+          filterProducts.map((item) => (
+            <ProductCards key={item.id} {...item} />
+          ))}
+      </div>
     </div>
   );
 }

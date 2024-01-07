@@ -11,12 +11,18 @@
 }
 .form_wrapper {
   display: flex;
+  align-items: center;
   gap: 1.3rem;
 }
 
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
 .from,
-.to,
-.counter {
+.to {
   width: 112px;
   font-size: 1rem;
   font-weight: 500;
@@ -26,8 +32,40 @@
   border-radius: 0.5rem;
 }
 
-.counter {
-  width: 37px;
+.checkbox {
+  width: 36px;
+  height: 36px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border: 1px solid #ddd;
+  border-radius: 6px;
+
+  transition: background 0.3s;
+}
+
+.checkbox::before {
+  content: "";
+
+  width: 24px;
+  height: 24px;
+
+  background: url(../../assets/images/check.svg) no-repeat;
+  background-size: cover;
+
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.checkbox_active {
+  background: #339933;
+  border: 1px solid transparent;
+}
+
+.checkbox_active::before {
+  opacity: 1;
 }
 
 .selection_field {

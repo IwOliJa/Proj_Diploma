@@ -1,11 +1,10 @@
 import styles from "./index.module.css";
 import ButtonNavMenu from "../../components/buttonsNavMenu";
 import FromCategoryBlock from "../../components/fromCategoryBlock";
-import { menulist3 } from "../../utils";
 import SortingFields from "../../components/sortingFields";
 import { useSelector, useDispatch } from "react-redux";
 import { getCategorySpecific } from "../../store/slices/fromCategorySlice";
-import { useEffect } from "react";
+import { useEffect, useMemo } from "react";
 import { useParams } from "react-router-dom";
 
 function FromCategory() {
@@ -16,16 +15,20 @@ function FromCategory() {
   }, []);
   const { categoryData, status } = useSelector((state) => state.category);
 
-  // {
-  //   menulist3[2].item = categoryData.category.title;
-  // }
+  const navigation = useMemo(() => {
+    return [
+      { id: 1, item: "Main Page" },
+      { id: 2, item: "Categories" },
+      { id: 3, item: categoryData.category?.title },
+    ];
+  }, [categoryData]);
 
   return (
     <div className={styles.main_container}>
       <div className={styles.buttons_wrapper}>
-        {menulist3.map((item) => {
+        {navigation.map((item) => {
           return (
-            <ButtonNavMenu key={item.id} {...item} length={menulist3.length} />
+            <ButtonNavMenu key={item.id} {...item} length={navigation.length} />
           );
         })}
       </div>
@@ -34,7 +37,7 @@ function FromCategory() {
           {categoryData.category.title}
         </h3>
       )}
-      <SortingFields />
+      {/* <SortingFields /> */}
       <FromCategoryBlock />
     </div>
   );
