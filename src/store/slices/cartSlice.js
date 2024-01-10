@@ -1,4 +1,5 @@
 import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
+import { getCartFromLocStor } from "../../utils";
 
 export const postOrder = createAsyncThunk(
   "order/postOrder",
@@ -25,7 +26,8 @@ export const postOrder = createAsyncThunk(
 export const cartSlice = createSlice({
   name: "cart",
   initialState: {
-    cart: [],
+    // cart: [],
+    cart: getCartFromLocStor(),
   },
   reducers: {
     addToCart: (state, action) => {

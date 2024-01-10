@@ -31,3 +31,8 @@ export default function ScrollToTop() {
   }, [pathname]);
   return null;
 }
+
+export function getCartFromLocStor() {
+  const data = localStorage.getItem("cart");
+  return data ? JSON.parse(localStorage.getItem("cart")) : [];
+}

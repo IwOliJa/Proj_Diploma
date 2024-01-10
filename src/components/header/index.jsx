@@ -3,7 +3,7 @@ import icon from "../../assets/images/icon.svg";
 import styles from "./index.module.css";
 import { VscMenu } from "react-icons/vsc";
 import { VscChromeClose } from "react-icons/vsc";
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { Link } from "react-router-dom";
 import { useSelector } from "react-redux";
 
@@ -11,6 +11,15 @@ function Header({ menulist }) {
   const { cart } = useSelector((state) => state.schoppingCart);
   console.log(cart);
   const [isOpen, setIsOpen] = useState(false);
+  const isMounted = useRef(false);
+
+  useEffect(() => {
+    if (isMounted.current) {
+      const json = JSON.stringify(cart);
+      localStorage.setItem("cart", json);
+    }
+    isMounted.current = true;
+  }, [cart]);
 
   return (
     <div className={styles.header}>
@@ -44,7 +53,13 @@ function Header({ menulist }) {
         </button>
         <Link to="/shoppings">
           <img className={styles.header_icon} src={icon} alt="icon" />
-          <span className={styles.items_counter}>{cart.length}</span>
+          <span
+            className={
+              cart.length ? [styles.items_counter] : [styles.items_counter_none]
+            }
+          >
+            {cart.length}
+          </span>
         </Link>
       </nav>
       <div className={styles.hr}></div>

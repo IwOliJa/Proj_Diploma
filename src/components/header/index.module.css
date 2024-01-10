@@ -34,6 +34,9 @@
   padding: 0.5rem 0.6rem;
   border-radius: 10rem;
 }
+.items_counter_none {
+  display: none;
+}
 .nav_menu_list {
   width: 40%;
   display: flex;
