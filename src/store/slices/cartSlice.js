@@ -26,8 +26,8 @@ export const postOrder = createAsyncThunk(
 export const cartSlice = createSlice({
   name: "cart",
   initialState: {
-    // cart: [],
-    cart: getCartFromLocStor(),
+    cart: [],
+    // cart: getCartFromLocStor(),
   },
   reducers: {
     addToCart: (state, action) => {

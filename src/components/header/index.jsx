@@ -9,17 +9,17 @@ import { useSelector } from "react-redux";
 
 function Header({ menulist }) {
   const { cart } = useSelector((state) => state.schoppingCart);
-  console.log(cart);
+  // console.log(cart);
   const [isOpen, setIsOpen] = useState(false);
-  const isMounted = useRef(false);
+  // const isMounted = useRef(false);
 
-  useEffect(() => {
-    if (isMounted.current) {
-      const json = JSON.stringify(cart);
-      localStorage.setItem("cart", json);
-    }
-    isMounted.current = true;
-  }, [cart]);
+  // useEffect(() => {
+  //   if (isMounted.current) {
+  //     const json = JSON.stringify(cart);
+  //     localStorage.setItem("cart", json);
+  //   }
+  //   isMounted.current = true;
+  // }, [cart]);
 
   return (
     <div className={styles.header}>

@@ -5,6 +5,7 @@ import {
   increment,
   decrement,
 } from "../../../store/slices/countSchoppingSlice";
+import { useState } from "react";
 
 function ProducktInfoBlock({
   id,
@@ -14,11 +15,16 @@ function ProducktInfoBlock({
   discont_price,
   description,
 }) {
+  const [btnValue, setBtnValue] = useState("Add to cart");
   const dispatch = useDispatch();
   const { count } = useSelector((state) => state.counter);
   const discountPercent = Math.ceil(((price - discont_price) / price) * 100);
 
   const hasDiscountsPrice = discont_price !== null;
+
+  function btnClick(event) {
+    setBtnValue((event.value = "Added"));
+  }
 
   return (
     <div className={styles.content_wrapper}>
@@ -87,16 +93,24 @@ function ProducktInfoBlock({
           >
             +
           </button>
-          <button
-            className={styles.adding_button}
-            onClick={() =>
+          <input
+            className={
+              btnValue === "Added"
+                ? [`${styles.adding_btn} ${styles.added}`]
+                : [styles.adding_btn]
+            }
+            type="button"
+            value={btnValue}
+            // className={styles.adding_btn}
+            onClick={(event) =>
               dispatch(
-                addToCart({ id, image, title, price, discont_price, count })
+                addToCart({ id, image, title, price, discont_price, count }),
+                btnClick(event)
               )
             }
-          >
-            Add to cart
-          </button>
+          />
+          {/* Add to cart
+          </input> */}
         </div>
         <div className={styles.description}>
           <p className={styles.heading}>Description</p>

@@ -48,7 +48,7 @@
   width: 284px;
   background-color: #339933;
   border-radius: 0.5rem;
-  border: none;
+  border: #339933;
   font-size: 1.3rem;
   font-weight: 600;
   color: #ffffff;
@@ -56,13 +56,24 @@
   padding: 1rem 2rem;
   margin: 1rem;
 }
+.adding_btn:hover {
+  background-color: #282828;
+}
+
+.added {
+  color: #282828;
+  background-color: #ffffff;
+  border: 2px solid #282828;
+}
+
+.added:hover {
+  background-color: #ffffff;
+}
+
 .card_wrapper:hover .adding_btn {
   left: 0;
   top: 45%;
   transition: 2s;
-}
-.adding_btn:hover {
-  background-color: #282828;
 }
 
 .card_name {

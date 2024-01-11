@@ -2,9 +2,15 @@ import styles from "./index.module.css";
 import { Link } from "react-router-dom";
 import { useDispatch } from "react-redux";
 import { addToCart } from "../../store/slices/cartSlice";
+import { useState } from "react";
 
 function ProductCards({ id, image, title, price, discont_price }) {
   const dispatch = useDispatch();
+  const [btnValue, setBtnValue] = useState("Add to cart");
+
+  function btnClick(event) {
+    setBtnValue((event.value = "Added"));
+  }
 
   const discountPercent = Math.ceil(((price - discont_price) / price) * 100);
   const hasDiscountPrice = discont_price !== null;
@@ -34,16 +40,21 @@ function ProductCards({ id, image, title, price, discont_price }) {
           </span>
         )}
       </Link>
-      <button
-        className={styles.adding_btn}
-        onClick={() =>
+      <input
+        className={
+          btnValue === "Added"
+            ? [`${styles.adding_btn} ${styles.added}`]
+            : [styles.adding_btn]
+        }
+        type="button"
+        value={btnValue}
+        onClick={(event) =>
           dispatch(
-            addToCart({ id, image, title, price, discont_price, count: 1 })
+            addToCart({ id, image, title, price, discont_price, count: 1 }),
+            btnClick(event)
           )
         }
-      >
-        Add to cart
-      </button>
+      />
     </div>
   );
 }

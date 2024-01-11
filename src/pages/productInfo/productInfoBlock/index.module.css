@@ -95,16 +95,30 @@
   background-color: transparent;
   font-size: 1.5rem;
 }
-.adding_button {
+.adding_btn {
   width: 316px;
   height: 58px;
   margin-left: 1.8rem;
   background-color: #339933;
   border-radius: 0.3rem;
-  border: none;
+  border: #339933;
   font-size: 1.2em;
   font-weight: 600;
   color: #ffffff;
+}
+
+.adding_btn:hover {
+  background-color: #282828;
+}
+
+.added {
+  color: #282828;
+  background-color: #ffffff;
+  border: 2px solid #282828;
+}
+
+.added:hover {
+  background-color: #ffffff;
 }
 .heading {
   font-size: 1.2rem;
