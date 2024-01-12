@@ -16,6 +16,7 @@ function MainCategories() {
       <CategoriesTitle />
       <div className={styles.categories_container}>
         {status === "fulfilled" &&
+          categoriesList &&
           categoriesList.slice(0, 4).map((item) => {
             return <CategoriesCards key={item.id} {...item} />;
           })}

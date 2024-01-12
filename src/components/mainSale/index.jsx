@@ -19,6 +19,7 @@ function MainSale() {
       <SaleTitle />
       <div className={styles.categories_container}>
         {status === "fulfilled" &&
+          productsList &&
           productsList
             .filter((el) => el.discont_price !== null)
             .slice(0, 4)
