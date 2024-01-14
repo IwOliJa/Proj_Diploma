@@ -1,4 +1,5 @@
 import styles from "./index.module.css";
+
 import { BiLogoInstagramAlt } from "react-icons/bi";
 import { IoLogoWhatsapp } from "react-icons/io";
 

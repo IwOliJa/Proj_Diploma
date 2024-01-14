@@ -28,7 +28,7 @@ function AllProducts() {
             product.discont_price !== null
               ? product.discont_price
               : product.price;
-
+          console.log(filter.minPrice);
           return price >= parseInt(filter.minPrice);
         });
       }
@@ -39,7 +39,6 @@ function AllProducts() {
             product.discont_price !== null
               ? product.discont_price
               : product.price;
-
           return price <= parseInt(filter.maxPrice);
         });
       }

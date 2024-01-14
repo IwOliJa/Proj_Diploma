@@ -1,11 +1,14 @@
+import styles from "./index.module.css";
+
 import logo from "../../assets/images/logo.svg";
 import icon from "../../assets/images/icon.svg";
-import styles from "./index.module.css";
+
 import { VscMenu } from "react-icons/vsc";
 import { VscChromeClose } from "react-icons/vsc";
+
 import { useEffect, useRef, useState } from "react";
-import { Link } from "react-router-dom";
 import { useSelector } from "react-redux";
+import { Link } from "react-router-dom";
 
 function Header({ menulist }) {
   const { cart } = useSelector((state) => state.schoppingCart);

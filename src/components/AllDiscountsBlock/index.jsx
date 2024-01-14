@@ -11,11 +11,11 @@ function AllDiscountsBlock() {
   }, []);
 
   const { productsList, status } = useSelector((state) => state.products);
+  console.log(productsList);
   return (
     <div className={styles.products_container}>
       {status === "fulfilled" &&
         productsList
-
           .filter((el) => el.discont_price !== null)
           .map((item) => <ProductCards key={item.id} {...item} />)}
     </div>

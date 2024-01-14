@@ -1,7 +1,7 @@
 import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
 
 export const postSale = createAsyncThunk(
-  "sale/postSale",
+  "user/postSale",
   async (userForm, { rejectWithValue }) => {
     try {
       const response = await fetch("http://localhost:3333/sale/send", {
@@ -25,10 +25,13 @@ export const postSale = createAsyncThunk(
 export const userSlice = createSlice({
   name: "user",
   initialState: {
-    name: "",
-    phone: "",
-    email: "",
-    errorsField: {
+    userInfo: {
+      name: "",
+      phone: "",
+      email: "",
+    },
+
+    errorFields: {
       name: {
         show: false,
         text: "",
@@ -60,7 +63,7 @@ export const userSlice = createSlice({
         hasError = true;
       }
 
-      state.errorsField[action.payload.key] = {
+      state.errorFields[action.payload.key] = {
         show: hasError,
         text: errorMessage,
       };

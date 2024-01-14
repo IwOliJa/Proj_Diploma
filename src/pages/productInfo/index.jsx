@@ -1,16 +1,18 @@
 import styles from "./index.module.css";
+
 import ButtonNavMenu from "../../components/buttonsNavMenu";
 import ProducktInfoBlock from "./productInfoBlock";
-import { useSelector, useDispatch } from "react-redux";
+
 import { getByProductInfo } from "../../store/slices/productInfoSlice";
 import { getCategories } from "../../store/slices/categoriesSlice";
-import { useEffect, useState, useMemo } from "react";
+
+import { useEffect, useMemo } from "react";
+import { useSelector, useDispatch } from "react-redux";
 import { useParams } from "react-router-dom";
 
 function ProductInfo() {
   const { id } = useParams();
   const dispatch = useDispatch();
-
   const { productData, status } = useSelector((state) => state.product);
   const { categoriesList } = useSelector((state) => state.categories);
 

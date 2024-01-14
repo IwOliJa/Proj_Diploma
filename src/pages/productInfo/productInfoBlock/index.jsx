@@ -1,11 +1,13 @@
 import styles from "./index.module.css";
-import { useDispatch, useSelector } from "react-redux";
+
 import { addToCart } from "../../../store/slices/cartSlice";
 import {
   increment,
   decrement,
 } from "../../../store/slices/countSchoppingSlice";
+
 import { useState } from "react";
+import { useDispatch, useSelector } from "react-redux";
 
 function ProducktInfoBlock({
   id,
@@ -15,15 +17,20 @@ function ProducktInfoBlock({
   discont_price,
   description,
 }) {
-  const [btnValue, setBtnValue] = useState("Add to cart");
   const dispatch = useDispatch();
   const { count } = useSelector((state) => state.counter);
-  const discountPercent = Math.ceil(((price - discont_price) / price) * 100);
 
+  const discountPercent = Math.ceil(((price - discont_price) / price) * 100);
   const hasDiscountsPrice = discont_price !== null;
 
-  function btnClick(event) {
+  const [btnValue, setBtnValue] = useState("Add to cart");
+  function changeBtnValue(event) {
     setBtnValue((event.value = "Added"));
+  }
+  function returnBtnValue(event) {
+    if (btnValue === "Added") {
+      setBtnValue((event.value = "Add to cart"));
+    }
   }
 
   return (
@@ -68,7 +75,10 @@ function ProducktInfoBlock({
         <p className={styles.product_name}>{title}</p>
 
         <span className={styles.product_price}>
-          ${hasDiscountsPrice ? (discont_price * count).toFixed(2) : price}
+          $
+          {hasDiscountsPrice
+            ? (discont_price * count).toFixed(2)
+            : (price * count).toFixed(2)}
         </span>
 
         {hasDiscountsPrice && (
@@ -82,14 +92,14 @@ function ProducktInfoBlock({
         <div className={styles.counting_filds}>
           <button
             className={styles.count_button}
-            onClick={() => dispatch(decrement())}
+            onClick={(event) => dispatch(decrement(), returnBtnValue(event))}
           >
             -
           </button>
           <div className={styles.count_data}>{count}</div>
           <button
             className={styles.count_button}
-            onClick={() => dispatch(increment())}
+            onClick={(event) => dispatch(increment(), returnBtnValue(event))}
           >
             +
           </button>
@@ -101,16 +111,13 @@ function ProducktInfoBlock({
             }
             type="button"
             value={btnValue}
-            // className={styles.adding_btn}
             onClick={(event) =>
               dispatch(
                 addToCart({ id, image, title, price, discont_price, count }),
-                btnClick(event)
+                changeBtnValue(event)
               )
             }
           />
-          {/* Add to cart
-          </input> */}
         </div>
         <div className={styles.description}>
           <p className={styles.heading}>Description</p>

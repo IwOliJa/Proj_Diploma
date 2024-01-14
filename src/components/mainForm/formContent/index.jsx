@@ -8,7 +8,8 @@ import { regExp } from "../../../utils/regExp";
 function FormContent() {
   const dispatch = useDispatch();
 
-  const user = useSelector((state) => state.user);
+  // const { userInfo, errorFields } = useSelector((state) => state.user);
+  // console.log(userInfo, errorFields);
 
   const [inputValues, setInputValues] = useState({
     name: "",
@@ -30,14 +31,13 @@ function FormContent() {
       text: "",
     },
   });
-
   const updateValue = useCallback(
     ({ key, value }) => {
       setInputValues({ ...inputValues, [key]: value });
     },
     [inputValues]
   );
-
+  console.log(inputValues);
   const validateField = useCallback(
     ({ key, value }) => {
       let hasError = false;
@@ -117,8 +117,6 @@ function FormContent() {
     },
     [inputValues, validateField]
   );
-
-  console.log(inputValues);
 
   return (
     <div className={styles.form_container}>
