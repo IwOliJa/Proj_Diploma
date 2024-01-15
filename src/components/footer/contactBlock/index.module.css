@@ -1,6 +1,4 @@
 .contacts_wrapper {
-  margin-top: 2.5rem;
-
   width: 100%;
   height: auto;
 
@@ -8,11 +6,13 @@
   flex-wrap: wrap;
 
   gap: 2rem;
+  margin-top: 2.5rem;
 }
 
 .contacts_wrapper>div {
-  background-color: #f1f3f4;
   border-radius: 0.5rem;
+  background-color: #f1f3f4;
+
   padding: 2rem;
 }
 
@@ -31,9 +31,14 @@
 
 .p_name {
   font-size: 1.3rem;
-  margin-bottom: 0.8rem;
   font-weight: 500;
   color: #8b8b8b;
+
+  margin-bottom: 0.8rem;
+}
+
+.icon {
+  color: #282828;
 }
 
 .p_info {
@@ -60,8 +65,8 @@
 
   .contacts_wrapper>div {
     width: 100%;
-    margin-right: 0;
     text-align: center;
+    margin-right: 0;
   }
 
   .box_small>span {

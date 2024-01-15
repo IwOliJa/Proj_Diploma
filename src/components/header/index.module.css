@@ -9,13 +9,14 @@
 }
 
 .nav_menu {
-  padding: 0px 40px;
-
   height: 128px;
 
   display: flex;
   align-items: center;
   justify-content: space-between;
+
+  padding: 0px 40px;
+
 }
 
 .header_logo {
@@ -32,14 +33,14 @@
   position: absolute;
   right: 4rem;
 
-  padding: 0.5rem 0.6rem;
+  border-radius: 10rem;
+  padding: 0.5rem 0.8rem;
 
   background-color: #339933;
-  border-radius: 10rem;
-
   font-size: 0.8rem;
   font-weight: 600;
   color: #ffffff;
+
 }
 
 .items_counter_none {
@@ -47,22 +48,21 @@
 }
 
 .nav_menu_list {
-  margin-top: 3.3rem;
-  margin-bottom: 3.3rem;
-
   width: 40%;
 
   display: flex;
   align-items: center;
   justify-content: space-between;
 
+  margin-top: 3.3rem;
+  margin-bottom: 3.3rem;
 }
 
 .nav_menu_item {
-  font-size: 1.2rem;
-  color: #282828;
-  font-weight: 500;
   text-decoration: none;
+  font-size: 1.2rem;
+  font-weight: 500;
+  color: #282828;
 
   cursor: pointer;
 }
@@ -93,19 +93,18 @@
     top: 0;
     left: -100%;
 
+    width: 45%;
+    height: auto;
+
+    display: block;
+
+    border: 2px solid #3399339f;
+    border-radius: 1.2rem;
     margin: 0 auto;
     padding-bottom: 1.8rem;
     padding-top: 1.8rem;
 
-    display: block;
-
-    width: 45%;
-    height: auto;
-
     background-color: rgba(255, 255, 255, 0.836);
-    border: 2px solid #3399339f;
-    border-radius: 1.2rem;
-
     text-align: center;
 
     z-index: 1;
@@ -126,14 +125,15 @@
   }
 
   .nav_menu_button {
+    display: block;
+
+    border: none;
+
     margin-left: auto;
     margin-right: 2rem;
     margin-top: 0.5rem;
 
-    display: block;
-
     background-color: transparent;
-    border: none;
 
     cursor: pointer;
   }
@@ -148,10 +148,10 @@
   }
 
   .header_icon {
-    margin-right: 2.5rem;
-
     width: 38px;
     height: 38px;
+
+    margin-right: 2.5rem;
   }
 
   .items_counter {
@@ -166,17 +166,15 @@
     top: 0;
     left: -100%;
 
-    margin-top: 6%;
-
-    padding-left: 2.5rem;
-    padding-top: 3.1rem;
-
     width: 75%;
     height: 93%;
 
     border-radius: 0 2rem 0 2rem;
-
     text-align: left;
+
+    margin-top: 6%;
+    padding-left: 2.5rem;
+    padding-top: 3.1rem;
   }
 
   .nav_menu_button {

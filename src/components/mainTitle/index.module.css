@@ -22,15 +22,16 @@
 }
 
 .main_title_button {
-  background-color: #339933;
-  border: none;
-  border-radius: 0.5rem;
   width: 218px;
   height: 58px;
+
+  border: none;
+  border-radius: 0.5rem;
   padding: 1rem 3.5rem;
+
+  background-color: #339933;
   font-size: 1.2rem;
   color: #ffffff;
-  /* transform: scaleX(-1) */
 
   transition: background 0.3s, color 0.3s;
   cursor: pointer;
@@ -43,8 +44,8 @@
 
 @media (max-width: 1024px) {
   .main_header {
-    font-size: 5rem;
     text-align: center;
+    font-size: 5rem;
   }
 
   .title_content_wrapper {

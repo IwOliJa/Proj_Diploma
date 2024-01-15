@@ -1,13 +1,16 @@
 .content_wrapper {
   width: 100%;
-  margin-top: 2.5rem;
+
   display: flex;
   justify-content: space-between;
+
+  margin-top: 2.5rem;
 }
 
 .images_content {
   width: 57%;
   height: auto;
+
   display: flex;
   justify-content: space-between;
 }
@@ -21,6 +24,7 @@
 .small_card {
   width: 200px;
   height: 180px;
+
   overflow: hidden;
   border-radius: 0.8rem;
   background-size: cover;
@@ -28,9 +32,12 @@
 
 .big_card {
   width: 70%;
+
+  border-radius: 0.8rem;
+
   margin-right: 2rem;
   margin-left: 2rem;
-  border-radius: 0.8rem;
+
   background-size: cover;
 }
 
@@ -39,22 +46,25 @@
 }
 
 .product_name {
+  margin-bottom: 1.8rem;
+
   font-size: 2.5rem;
   font-weight: 700;
-  margin-bottom: 1.8rem;
 
   color: #282828;
 }
 
 .product_price {
+  margin-right: 2.5rem;
+
   font-size: 4rem;
   font-weight: 700;
   color: #282828;
-  margin-right: 2.5rem;
 }
 
 .discount_item {
   position: relative;
+
   font-size: 2.5rem;
   font-weight: 500;
   color: #8b8b8b;
@@ -64,7 +74,9 @@
   position: absolute;
   top: 50%;
   right: 0;
+
   width: 100%;
+
   border: solid 1px #8b8b8b;
 }
 
@@ -72,12 +84,14 @@
   position: absolute;
   width: 4rem;
   height: 2.1rem;
-  background-color: #339933;
-  padding-top: 0.3rem;
+
   border-radius: 0.3rem;
+  padding-top: 0.3rem;
+
+  background-color: #339933;
+  text-align: center;
   font-size: 1.2rem;
   font-weight: 600;
-  text-align: center;
   color: #ffffff;
 }
 
@@ -89,17 +103,20 @@
 .count_button {
   width: 58px;
   height: 58px;
+
   border: 1px solid #dddddd;
   background-color: transparent;
   font-size: 2rem;
 }
 
 .count_data {
+  width: 96px;
+  height: 58px;
+
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 96px;
-  height: 58px;
+
   border: 1px solid #dddddd;
   background-color: transparent;
   font-size: 1.5rem;
@@ -108,10 +125,12 @@
 .adding_btn {
   width: 316px;
   height: 58px;
-  margin-left: 1.8rem;
-  background-color: #339933;
+
   border-radius: 0.3rem;
   border: #339933;
+  margin-left: 1.8rem;
+
+  background-color: #339933;
   font-size: 1.2em;
   font-weight: 600;
   color: #ffffff;
@@ -125,9 +144,9 @@
 }
 
 .added {
-  color: #282828;
-  background-color: #ffffff;
   border: 2px solid #282828;
+  background-color: #ffffff;
+  color: #282828;
 }
 
 .added:hover {
@@ -135,10 +154,11 @@
 }
 
 .heading {
+  margin-bottom: 1rem;
+
   font-size: 1.2rem;
   font-weight: 600;
   color: #282828;
-  margin-bottom: 1rem;
 }
 
 .text,
@@ -165,8 +185,8 @@
 
   .images_content {
     width: 100%;
-    margin: 2.5rem 0;
     justify-content: space-around;
+    margin: 2.5rem 0;
   }
 
   .info_content {
@@ -188,6 +208,7 @@
   .images_content {
     flex-direction: column-reverse;
     align-items: center;
+
     margin-top: 0;
   }
 
@@ -204,13 +225,9 @@
 @media (max-width: 425px) {
   .big_card {
     width: 100%;
-    /* display: none; */
   }
 
   .content_small {
-    /* flex-direction: column;
-    gap: 1.5rem;
-    margin-top: 2.5rem; */
     display: none;
   }
 

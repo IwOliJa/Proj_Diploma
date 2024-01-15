@@ -11,6 +11,7 @@
 .buttons_wrapper {
   display: flex;
   position: relative;
+
   font-size: 1rem;
   font-weight: 500;
 }

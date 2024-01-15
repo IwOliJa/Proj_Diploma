@@ -1,32 +1,38 @@
 .main_container {
-  display: flex;
-  flex-direction: column;
   width: 100%;
   height: auto;
+
+  display: flex;
+  flex-direction: column;
+
   padding: 2.5rem;
 }
-.main_container > p {
+
+.main_container>p {
   font-size: 4rem;
   font-weight: 700;
   color: #282828;
 }
 
 @media (max-width: 1024px) {
-  .main_container > p {
+  .main_container>p {
+    text-align: center;
     font-size: 3.5rem;
-    text-align: center;
   }
 }
+
 @media (max-width: 768px) {
-  .main_container > p {
-    font-size: 3rem;
+  .main_container>p {
     text-align: center;
+    font-size: 3rem;
   }
 }
+
 @media (max-width: 425px) {
-  .main_container > p {
+  .main_container>p {
     font-size: 2.5rem;
   }
+
   .main_container {
     padding-right: 0.5rem;
     padding-left: 0.5rem;

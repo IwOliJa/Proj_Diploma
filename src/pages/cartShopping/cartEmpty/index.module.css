@@ -12,11 +12,13 @@
 .continue_button {
   width: 318px;
   height: 58px;
-  background-color: #339933;
+
   border-radius: 0.3rem;
   border: none;
   padding: 1rem 3.5rem;
   margin: 2rem 0;
+
+  background-color: #339933;
   font-size: 1.2rem;
   font-weight: 600;
   color: #ffffff;

@@ -5,12 +5,13 @@
 }
 
 .categories_container {
-  width: 100%;
-  height: auto;
-
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
+
+  width: 100%;
+  height: auto;
+
 }
 
 .buttons_wrapper a {

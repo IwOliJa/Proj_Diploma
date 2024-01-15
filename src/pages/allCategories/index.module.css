@@ -5,6 +5,7 @@
 .buttons_wrapper {
   display: flex;
   position: relative;
+
   font-size: 1rem;
   font-weight: 500;
 }
@@ -13,6 +14,7 @@
   font-size: 4rem;
   font-weight: 700;
   color: #282828;
+
   margin: 2.5rem 0;
 }
 
@@ -30,6 +32,7 @@
   .categories_header {
     font-size: 3rem;
     text-align: center;
+
     margin-top: 0;
   }
 

@@ -3,8 +3,9 @@
 }
 
 .buttons_wrapper {
-  display: flex;
   position: relative;
+  display: flex;
+
   font-size: 1rem;
   font-weight: 500;
 }

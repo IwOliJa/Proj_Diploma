@@ -1,14 +1,17 @@
 .forms_content {
-  margin: 2.5rem 0;
   display: flex;
   flex-wrap: wrap;
-  gap: 2rem;
   align-items: center;
+  gap: 2rem;
+
   font-size: 1.3rem;
   font-weight: 600;
 
+  margin: 2.5rem 0;
+
   color: #282828;
 }
+
 .form_wrapper {
   display: flex;
   align-items: center;
@@ -24,12 +27,15 @@ input::-webkit-inner-spin-button {
 .from,
 .to {
   width: 112px;
+
+  border: 1px solid #dddddd;
+  border-radius: 0.5rem;
+
   font-size: 1rem;
   font-weight: 500;
   color: #8b8b8b;
+
   padding: 0.5rem 1rem;
-  border: 1px solid #dddddd;
-  border-radius: 0.5rem;
 }
 
 .checkbox {
@@ -70,10 +76,12 @@ input::-webkit-inner-spin-button {
 
 .selection_field {
   min-width: 200px;
+
+  border: 1px solid #dddddd;
+  border-radius: 0.5rem;
+  padding: 0.5rem 0.5rem 0.5rem 1rem;
+
   font-size: 1rem;
   font-weight: 500;
   color: #8b8b8b;
-  padding: 0.5rem 0.5rem 0.5rem 1rem;
-  border: 1px solid #dddddd;
-  border-radius: 0.5rem;
 }

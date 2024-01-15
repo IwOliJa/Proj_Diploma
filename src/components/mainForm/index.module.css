@@ -1,12 +1,15 @@
 .form_wrapper {
   width: auto;
   height: auto;
+
   display: flex;
   align-items: center;
   flex-direction: column;
+
+  border-radius: 1rem;
   padding: 2.5rem 2.5rem 0 2.5rem;
   margin: 2.5rem;
-  border-radius: 1rem;
+
   background: linear-gradient(261.47deg, #0b710b 32.63%, #339933 98.96%);
 }
 
@@ -20,6 +23,7 @@
   .form_title {
     font-size: 2.8rem;
     text-align: center;
+
     margin-top: 2rem;
   }
 

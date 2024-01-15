@@ -12,12 +12,12 @@ function ContactBlock () {
       </div>
       <div className={styles.box_small}>
         <p className={styles.p_name}>Socials</p>
-        <span>
+        <a className={styles.icon} href="https://www.instagram.com/">
           <BiLogoInstagramAlt size="45px" />
-        </span>
-        <span>
+        </a>
+        <a className={styles.icon} href="https://web.whatsapp.com/">
           <IoLogoWhatsapp size="43px" />
-        </span>
+        </a>
       </div>
       <div className={styles.box_large}>
         <p className={styles.p_name}>Adress</p>
