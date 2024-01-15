@@ -3,7 +3,7 @@ import MainForm from "../../components/mainForm";
 import MainSale from "../../components/mainSale";
 import MainTitle from "../../components/mainTitle";
 
-function MainPage() {
+function MainPage () {
   return (
     <div>
       <MainTitle />
@@ -13,4 +13,5 @@ function MainPage() {
     </div>
   );
 }
+
 export default MainPage;

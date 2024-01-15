@@ -1,6 +1,8 @@
-import "./App.css";
-import Footer from "./components/footer/index.jsx";
-import Header from "./components/header/index.jsx";
+import { Routes, Route } from "react-router-dom";
+
+import { menulist } from "./utils/index.js";
+import ScrollToTop from "./utils/index.js";
+
 import NotFoundPage from "./pages/notFound/index.jsx";
 import CartShopping from "./pages/cartShopping/index.jsx";
 import ProductInfo from "./pages/productInfo/index.jsx";
@@ -9,13 +11,17 @@ import AllProducts from "./pages/allProducts/index.jsx";
 import FromCategory from "./pages/fromCategory/index.jsx";
 import AllCategories from "./pages/allCategories/index.jsx";
 import MainPage from "./pages/mainPage/index.jsx";
-import { menulist } from "./utils/index.js";
-import { Routes, Route } from "react-router-dom";
-import ScrollToTop from "./utils/index.js";
 
-function App() {
+import ModaleWindow from "./components/modaleWindow/index.jsx";
+import Footer from "./components/footer/index.jsx";
+import Header from "./components/header/index.jsx";
+
+import "./App.css";
+
+function App () {
   return (
     <div className="App">
+      <ModaleWindow />
       <Header menulist={menulist} />
       <ScrollToTop />
       <Routes>

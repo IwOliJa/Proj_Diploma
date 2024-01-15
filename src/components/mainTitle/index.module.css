@@ -6,12 +6,14 @@
   transform: scaleX(-1);
   padding: 5rem 2.5rem 13rem;
 }
+
 .title_content_wrapper {
   display: flex;
   flex-direction: column;
   gap: 2rem;
   transform: scaleX(-1);
 }
+
 .main_header {
   font-family: "Montserrat", sans-serif;
   font-weight: 700;
@@ -29,15 +31,26 @@
   font-size: 1.2rem;
   color: #ffffff;
   /* transform: scaleX(-1) */
+
+  transition: background 0.3s, color 0.3s;
+  cursor: pointer;
 }
+
+.main_title_button:hover {
+  background: #282828;
+  color: #fff;
+}
+
 @media (max-width: 1024px) {
   .main_header {
     font-size: 5rem;
     text-align: center;
   }
+
   .title_content_wrapper {
     align-items: center;
   }
+
   .main_title {
     padding: 9rem 0;
   }
@@ -48,11 +61,13 @@
     font-size: 4rem;
   }
 }
+
 @media (max-width: 425px) {
   .main_header {
     font-size: 3.5rem;
     line-height: 5.5rem;
   }
+
   .main_title {
     padding: 3rem 0;
   }

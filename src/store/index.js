@@ -6,8 +6,9 @@ import productInfoReducer from "./slices/productInfoSlice.js";
 import countReducer from "./slices/countSchoppingSlice.js";
 import cartReducer from "./slices/cartSlice.js";
 import userReducer from "./slices/userSlice.js";
+import modaleSlice from "./slices/modaleSlice.js";
 
-const store = configureStore({
+const store = configureStore( {
   reducer: {
     schoppingCart: cartReducer,
     counter: countReducer,
@@ -16,7 +17,8 @@ const store = configureStore({
     products: allProductsReducer,
     categories: categoriesReducer,
     user: userReducer,
+    modale: modaleSlice,
   },
-});
+} );
 
 export default store;

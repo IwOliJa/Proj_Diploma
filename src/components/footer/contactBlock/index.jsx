@@ -1,9 +1,9 @@
-import styles from "./index.module.css";
-
 import { BiLogoInstagramAlt } from "react-icons/bi";
 import { IoLogoWhatsapp } from "react-icons/io";
 
-function ContactBlock() {
+import styles from "./index.module.css";
+
+function ContactBlock () {
   return (
     <div className={styles.contacts_wrapper}>
       <div className={styles.box_large}>

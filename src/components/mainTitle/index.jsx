@@ -1,7 +1,8 @@
-import styles from "./index.module.css";
 import { Link } from "react-router-dom";
 
-function MainTitle() {
+import styles from "./index.module.css";
+
+function MainTitle () {
   return (
     <div className={styles.main_title}>
       <div className={styles.title_content_wrapper}>

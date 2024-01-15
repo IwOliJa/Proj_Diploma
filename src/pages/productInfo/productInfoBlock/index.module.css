@@ -4,12 +4,14 @@
   display: flex;
   justify-content: space-between;
 }
+
 .images_content {
   width: 57%;
   height: auto;
   display: flex;
   justify-content: space-between;
 }
+
 .content_small {
   display: flex;
   flex-direction: column;
@@ -19,9 +21,9 @@
 .small_card {
   width: 200px;
   height: 180px;
-  background-size: cover;
   overflow: hidden;
   border-radius: 0.8rem;
+  background-size: cover;
 }
 
 .big_card {
@@ -29,11 +31,13 @@
   margin-right: 2rem;
   margin-left: 2rem;
   border-radius: 0.8rem;
+  background-size: cover;
 }
 
 .info_content {
   width: 40%;
 }
+
 .product_name {
   font-size: 2.5rem;
   font-weight: 700;
@@ -41,6 +45,7 @@
 
   color: #282828;
 }
+
 .product_price {
   font-size: 4rem;
   font-weight: 700;
@@ -62,6 +67,7 @@
   width: 100%;
   border: solid 1px #8b8b8b;
 }
+
 .discont_percent {
   position: absolute;
   width: 4rem;
@@ -74,10 +80,12 @@
   text-align: center;
   color: #ffffff;
 }
+
 .counting_filds {
   display: flex;
   margin: 1.5rem 0;
 }
+
 .count_button {
   width: 58px;
   height: 58px;
@@ -85,6 +93,7 @@
   background-color: transparent;
   font-size: 2rem;
 }
+
 .count_data {
   display: flex;
   align-items: center;
@@ -95,6 +104,7 @@
   background-color: transparent;
   font-size: 1.5rem;
 }
+
 .adding_btn {
   width: 316px;
   height: 58px;
@@ -105,6 +115,9 @@
   font-size: 1.2em;
   font-weight: 600;
   color: #ffffff;
+
+  transition: background 0.3s, color 0.3s;
+  cursor: pointer;
 }
 
 .adding_btn:hover {
@@ -120,6 +133,7 @@
 .added:hover {
   background-color: #ffffff;
 }
+
 .heading {
   font-size: 1.2rem;
   font-weight: 600;
@@ -133,6 +147,7 @@
   font-weight: 400;
   color: #282828;
 }
+
 .link {
   margin-top: 1rem;
 }
@@ -147,18 +162,22 @@
   .content_wrapper {
     flex-direction: column;
   }
+
   .images_content {
     width: 100%;
     margin: 2.5rem 0;
     justify-content: space-around;
   }
+
   .info_content {
     width: 100%;
     text-align: center;
   }
+
   .counting_filds {
     justify-content: center;
   }
+
   .product_name {
     font-size: 3.5rem;
     margin-top: 1.8rem;
@@ -171,14 +190,17 @@
     align-items: center;
     margin-top: 0;
   }
+
   .big_card {
     width: 80%;
   }
+
   .content_small {
     flex-direction: row;
     gap: 1.5rem;
   }
 }
+
 @media (max-width: 425px) {
   .big_card {
     width: 100%;
@@ -191,19 +213,24 @@
     margin-top: 2.5rem; */
     display: none;
   }
+
   .product_name {
     font-size: 3rem;
   }
+
   .product_price {
     font-size: 3.5rem;
   }
+
   .discount_item {
     font-size: 2rem;
   }
+
   .counting_filds {
     flex-wrap: wrap;
     margin-bottom: 0;
   }
+
   .adding_button {
     margin: 2.5rem 0;
   }

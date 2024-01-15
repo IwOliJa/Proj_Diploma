@@ -1,9 +1,11 @@
-import styles from "./index.module.css";
-import Number4 from "../../assets/images/4.svg";
-import Cactus from "../../assets/images/404.svg";
 import { Link } from "react-router-dom";
 
-function NotFoundPage() {
+import Number4 from "../../assets/images/4.svg";
+import Cactus from "../../assets/images/404.svg";
+
+import styles from "./index.module.css";
+
+function NotFoundPage () {
   return (
     <div className={styles.main_container}>
       <div className={styles.images_wrapper}>

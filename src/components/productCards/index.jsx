@@ -1,19 +1,22 @@
-import styles from "./index.module.css";
-import { Link } from "react-router-dom";
+import { useState, useCallback } from "react";
 import { useDispatch } from "react-redux";
+import { Link } from "react-router-dom";
+
 import { addToCart } from "../../store/slices/cartSlice";
-import { useState } from "react";
 
-function ProductCards({ id, image, title, price, discont_price }) {
+import styles from "./index.module.css";
+
+function ProductCards ( { id, image, title, price, discont_price } ) {
+  const [ isClicked, setIsClicked ] = useState( false );
+
   const dispatch = useDispatch();
-  const [btnValue, setBtnValue] = useState("Add to cart");
 
-  function btnClick(event) {
-    setBtnValue((event.value = "Added"));
-  }
-
-  const discountPercent = Math.ceil(((price - discont_price) / price) * 100);
+  const discountPercent = Math.ceil( ( ( price - discont_price ) / price ) * 100 );
   const hasDiscountPrice = discont_price !== null;
+
+  const btnClick = useCallback( () => {
+    setIsClicked( !isClicked );
+  }, [ isClicked ] )
 
   return (
     <div className={styles.card_wrapper}>
@@ -21,38 +24,28 @@ function ProductCards({ id, image, title, price, discont_price }) {
         <div
           className={styles.image}
           key={id}
-          style={{
-            backgroundImage: `url(http://localhost:3333${image})`,
-            backgroundSize: "cover",
-          }}
-        ></div>
-        {hasDiscountPrice && (
-          <span className={styles.discount_percent}>-{discountPercent}%</span>
-        )}
+          style={{ backgroundImage: `url(http://localhost:3333${image})` }}>
+        </div>
+        {hasDiscountPrice && <span className={styles.discount_percent}>-{discountPercent}%</span>}
         <p className={styles.card_name}>{title}</p>
         <span className={styles.product_price}>
           ${hasDiscountPrice ? discont_price : price}
         </span>
-        {hasDiscountPrice && (
+        {hasDiscountPrice &&
           <span className={styles.discount_item}>
             ${price}
             <span className={styles.delete_symbol}></span>
           </span>
-        )}
+        }
       </Link>
       <input
-        className={
-          btnValue === "Added"
-            ? [`${styles.adding_btn} ${styles.added}`]
-            : [styles.adding_btn]
-        }
         type="button"
-        value={btnValue}
-        onClick={(event) =>
-          dispatch(
-            addToCart({ id, image, title, price, discont_price, count: 1 }),
-            btnClick(event)
-          )
+        value={isClicked ? 'Added' : 'Add to cart'}
+        className={[ `${styles.adding_btn} ${isClicked && styles.added}` ]}
+        onClick={() => {
+          dispatch( addToCart( { id, image, title, price, discont_price, count: 1 } ) );
+          btnClick()
+        }
         }
       />
     </div>

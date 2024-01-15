@@ -9,30 +9,30 @@ export const menulist = [
 ];
 
 export const menulist2 = [
-  { id: 1, item: "Main Page" },
-  { id: 2, item: "Categories" },
+  { id: 1, item: "Main Page", path: '/' },
+  { id: 2, item: "Categories", path: '/categories' },
 ];
 
 export const menulist4 = [
-  { id: 1, item: "Main Page" },
-  { id: 2, item: "All Products" },
+  { id: 1, item: "Main Page", path: '/' },
+  { id: 2, item: "All Products", path: '/products' },
 ];
 export const menulist5 = [
-  { id: 1, item: "Main Page" },
-  { id: 2, item: "All Sales" },
+  { id: 1, item: "Main Page", path: '/' },
+  { id: 2, item: "All Sales", path: '/sales' },
 ];
 
 export const main_url = "http://localhost:3333";
 
-export default function ScrollToTop() {
+export default function ScrollToTop () {
   const { pathname } = useLocation();
-  useEffect(() => {
-    window.scrollTo(0, 0);
-  }, [pathname]);
+  useEffect( () => {
+    window.scrollTo( 0, 0 );
+  }, [ pathname ] );
   return null;
 }
 
-export function getCartFromLocStor() {
-  const data = localStorage.getItem("cart");
-  return data ? JSON.parse(localStorage.getItem("cart")) : [];
+export function getCartFromLocStor () {
+  const data = localStorage.getItem( "cart" );
+  return data ? JSON.parse( localStorage.getItem( "cart" ) ) : [];
 }

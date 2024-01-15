@@ -1,7 +1,8 @@
-import styles from "./index.module.css";
 import { Link } from "react-router-dom";
 
-function CategoriesTitle() {
+import styles from "./index.module.css";
+
+function CategoriesTitle () {
   return (
     <div className={styles.title_content}>
       <p className={styles.categories_header}>Categories</p>

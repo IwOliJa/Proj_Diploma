@@ -1,18 +1,21 @@
-import styles from "./index.module.css";
+import { useEffect } from "react";
+import { useSelector, useDispatch } from "react-redux";
+
 import SaleTitle from "./saleTitle/index.jsx";
 import ProductCards from "../productCards";
-import { useSelector, useDispatch } from "react-redux";
 import { getProducts } from "../../store/slices/allProductsSlice.js";
 
-import { useEffect } from "react";
+import styles from "./index.module.css";
 
-function MainSale() {
+function MainSale () {
+
   const dispatch = useDispatch();
-  useEffect(() => {
-    dispatch(getProducts());
-  }, []);
 
-  const { productsList, status } = useSelector((state) => state.products);
+  useEffect( () => {
+    dispatch( getProducts() );
+  }, [] ); //eslint-disable-line
+
+  const { productsList, status } = useSelector( ( state ) => state.products );
 
   return (
     <div className={styles.main_container}>
@@ -21,11 +24,11 @@ function MainSale() {
         {status === "fulfilled" &&
           productsList &&
           productsList
-            .filter((el) => el.discont_price !== null)
-            .slice(0, 4)
-            .map((item) => {
+            .filter( ( el ) => el.discont_price !== null )
+            .slice( 0, 4 )
+            .map( ( item ) => {
               return <ProductCards key={item.id} {...item} />;
-            })}
+            } )}
       </div>
     </div>
   );

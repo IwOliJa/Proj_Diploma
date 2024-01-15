@@ -16,25 +16,33 @@
   margin: 2.5rem 0;
 }
 
+.buttons_wrapper a {
+  text-decoration: none;
+}
+
 @media (max-width: 1024px) {
   .categories_header {
     font-size: 3.5rem;
   }
 }
+
 @media (max-width: 768px) {
   .categories_header {
     font-size: 3rem;
     text-align: center;
     margin-top: 0;
   }
+
   .buttons_wrapper {
     display: none;
   }
 }
+
 @media (max-width: 425px) {
   .categories_header {
     font-size: 2.5rem;
   }
+
   .buttons_wrapper {
     display: none;
   }

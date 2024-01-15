@@ -2,67 +2,125 @@
   width: 100%;
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  align-items: flex-end;
+
   margin-top: 2rem;
 }
+
 .image_wrapper {
   display: flex;
   width: 57%;
   height: auto;
 }
+
 .image {
   width: auto;
   height: 100%;
 }
+
 .form_content {
+  margin-bottom: 2.5rem;
+  width: 40%;
+
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 1.2rem;
-  width: 40%;
+
+  gap: 2.4rem;
 }
-.form_content > input {
+
+
+.container {
+  position: relative;
   width: 100%;
+
+  display: flex;
+  flex-direction: column;
+}
+
+.container>input {
+  outline: none;
+
   padding: 1rem 2rem 1rem 2rem;
-  background: transparent;
+
+  width: 100%;
+
+  background: none;
   border: solid 1.5px #ffffff;
   border-radius: 0.3rem;
-}
-.form_content > input::placeholder {
+
   font-size: 1.2rem;
   font-weight: 500;
   color: #ffffff;
 }
-.error_text {
+
+.container>input::placeholder {
   font-size: 1.2rem;
-  font-weight: 600;
-  color: rgb(142, 13, 13);
+  font-weight: 500;
+  color: #ffffff;
 }
 
+.container .error_text {
+  position: absolute;
+  bottom: -30px;
+
+  width: 100%;
+  height: 30px;
+
+  background: rgb(255 255 255 / 50%);
+
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #e10000;
+
+}
+
+
 .form_button {
+  margin-top: 0.8rem;
+
   width: 100%;
   height: 3.5rem;
-  margin-top: 0.8rem;
+
   border-radius: 0.3rem;
   border: none;
+
   font-size: 1.3rem;
   font-weight: 600;
   color: #282828;
+
+  transition: background 0.3s, opacity 0.3s;
+}
+
+.form_button:hover {
+  color: #fff;
+  background: #282828;
+}
+
+.form_button_active {
+  background: #F1F3F4;
+  color: #393;
+
+  pointer-events: none;
 }
 
 @media (max-width: 1024px) {
   .form_container {
     flex-direction: column-reverse;
+    align-items: center;
     gap: 2rem;
   }
+
   .image_wrapper {
     justify-content: center;
     width: 100%;
   }
+
   .image {
     width: auto;
     height: 100%;
   }
+
   .form_content {
     width: 60%;
   }
@@ -72,9 +130,11 @@
   .form_content {
     width: 80%;
   }
+
   .image {
     width: 90%;
   }
+
   .form_button {
     font-size: 1rem;
   }

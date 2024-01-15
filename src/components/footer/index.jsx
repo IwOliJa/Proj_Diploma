@@ -1,8 +1,9 @@
 import ContactBlock from "./contactBlock";
-import styles from "./index.module.css";
 import LocationBlock from "./locationBlock";
 
-function Footer() {
+import styles from "./index.module.css";
+
+function Footer () {
   return (
     <div className={styles.main_container}>
       <p>Contact</p>

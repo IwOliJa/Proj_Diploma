@@ -1,70 +1,138 @@
-# Getting Started with Create React App
+# Garden Shop
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
+**Интернет-магазин товаров для дома и сада**.
+Поможет удобно и быстро выбрать товар в любое время и из любого места.
 
-In the project directory, you can run:
+На сайте представлен широкий ассортимент с подробным описанием продуктов,  с разделением на категории и системой фильтрации.
+Есть с возможностью получения скидки .
 
-### `npm start`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+# Содержание
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+- [Garden Shop](#garden-shop)
+- [Содержание](#содержание)
+	- [Технологии](#технологии)
+	- [Установка проекта](#установка-проекта)
+		- [Требования:](#требования)
+		- [Локальная установка](#локальная-установка)
+		- [Установка зависимостей](#установка-зависимостей)
+		- [Запуск проекта в режиме разработки](#запуск-проекта-в-режиме-разработки)
+		- [Сборка проекта](#сборка-проекта)
+	- [О проекте](#о-проекте)
+		- [Дизайн-макет](#дизайн-макет)
+		- [Backend](#backend)
+		- [Задача](#задача)
+			- [1. Верстка макета](#1-верстка-макета)
+			- [2. Система категорий и подкатегорий товаров](#2-система-категорий-и-подкатегорий-товаров)
+			- [3. Карточка товара](#3-карточка-товара)
+			- [4. Фильтрация товаров:](#4-фильтрация-товаров)
+			- [5. Окно для получения персональной скидки:](#5-окно-для-получения-персональной-скидки)
+			- [6. Система корзины:](#6-система-корзины)
+			- [7.  Контактная информация](#7--контактная-информация)
+	- [Галлерея](#галлерея)
+		- [Main Page](#main-page)
+		- [Categories](#categories)
+		- [Subcategory](#subcategory)
+		- [Product Card](#product-card)
+		- [All Products](#all-products)
+		- [Discounted Items](#discounted-items)
+		- [Shopping Cart](#shopping-cart)
+		- [Modal Window](#modal-window)
+	- [Автор](#автор)
 
-### `npm test`
+## Технологии
+- ![React](https://img.shields.io/badge/react-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB)
+- ![Redux](https://img.shields.io/badge/redux-%23593d88.svg?style=for-the-badge&logo=redux&logoColor=white)
+- ![HTML5](https://img.shields.io/badge/html5-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=white)
+- ![CSS3](https://img.shields.io/badge/css3-%231572B6.svg?style=for-the-badge&logo=css3&logoColor=white)
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Установка проекта
 
-### `npm run build`
+### Требования:
+Для установки и запуска проекта, необходим [NodeJS V18](https://nodejs.org/en/blog/release/v18.12.0)
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+![NodeJS](https://img.shields.io/badge/node.js-6DA55F?style=for-the-badge&logo=node.js&logoColor=white)
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+###  Локальная установка
+Запустите **Visual Studio Code** или или аналогичный инструмент.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Выберите **папку** в которой будет развернут **проект**.
 
-### `npm run eject`
+Откройте терминал и введите команду ``git clone https://github.com/IwOliJa/Proj_Diploma.git``, чтобы склонировать проект.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+### Установка зависимостей
+Для установки необходимых зависимостей выполните команду ``npm install`` в терминале.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+### Запуск проекта в режиме разработки
+Чтобы запустить проект в режиме разработки, выполните команду ``npm start`` в терминале.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+### Сборка проекта
+Для сборки проекта выполните команду ``npm build`` в терминале.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+##  О проекте
 
-## Learn More
+### Дизайн-макет
+Был предоставлен дизайн в [Figma](https://www.figma.com/file/yNWvXvjZC0t8d9yBOpeEPy/Garden?node-id=4743%3A989)
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+### Backend
+Был предоставлен репозиторий в [GitHub](https://github.com/HaykInanc/telran_project_backend)
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+### Задача
+Для создания интернет-магазина для покупки товаров для дома и сада нужно выполнить следующие задачи:
 
-### Code Splitting
+#### 1. Верстка макета
+- Сверстать дизайн-макет.
+- Обеспечить адаптивность для различных устройств:  desktop, телефон и планшет с разрешениями: 1024px, 768px, 400px.
+#### 2. Система категорий и подкатегорий товаров
+- Реализовать систему категории  и подкатегори товаров.
+- Использовать GET - запрос для получение списков товаров и категорий.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+#### 3. Карточка товара
+- Создать карточку товара с фотографией и его описанием.
+- Добавить возможность выбора количества товаров и добавление их в корзину.
 
-### Analyzing the Bundle Size
+#### 4. Фильтрация товаров:
+- Реализовать систему фильтрации товаров от и по какой цене, по наличию скидок, сортировку от болькошей к меньшей цене и наоборот.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+#### 5. Окно для получения персональной скидки:
+- Создать окно для ввода данных (имя, номер телефона, почта) с последующей вальдации с использованием регулярных выражений (RegExp).
+- Реализовать отправку POST-запроса для  получение персональной скидки, с последующим получением подтверждения от сервера.
+#### 6. Система корзины:
 
-### Making a Progressive Web App
+- Разработать корзину с возможность добавления, удаление и изменения количества одноименных товаров.
+- Добавить форму с валидацией полей (имя, номер телефона, почта) с помощью регулярных выражений (RegExp).
+- Реализовать отправку POST-запроса для офоромления заказа, с последующим получением подтверждения от сервера.
+-  Добавить появление модального окна подтверждения покупки, после нажатия на кнопку **"Order"**.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+#### 7.  Контактная информация
+- Добавить поля с контактной информацией, такие как номер телефона, ссылки на социальные сети, физический адрес и часы работы.
+- Реализовать отображение интерактивной карты с меткой, указывающей на местоположение интернет-магазина.
 
-### Advanced Configuration
+## Галлерея
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+### Main Page
 
-### Deployment
+![MainPage](https://cdn.discordapp.com/attachments/639420321677443073/1196275143534714900/MainPage.png?ex=65b7090b&is=65a4940b&hm=7c34d23e0a04681ba37939b6e465d7a7bee6db4496655fcabf7f50fe70e7a58c&)
+	
+### Categories
+![Categories](https://cdn.discordapp.com/attachments/639420321677443073/1196275623518281728/Categories.png?ex=65b7097e&is=65a4947e&hm=dc941a9c515c06eabf9dea15f8331b5d6bd1361a0d2a5f5356b710466c0ca3b7&)
+### Subcategory
+![SubCategory](https://cdn.discordapp.com/attachments/639420321677443073/1196276222515236914/SubCategory.png?ex=65b70a0d&is=65a4950d&hm=cee2f63afba7e9b1133338845c96994611341d8562fca18f64bbbead0b043d7f&)
+### Product Card
+![Product Card](https://cdn.discordapp.com/attachments/639420321677443073/1196279060075130890/ProductInfo.png?ex=65b70cb1&is=65a497b1&hm=ae02c47aac136f221fc9e7509a89103e4f928d120649bb80b64ea70c42a3ff6f&)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+### All Products
 
-### `npm run build` fails to minify
+![All Products part 1](https://cdn.discordapp.com/attachments/639420321677443073/1196290194505220146/AllProducts1.png?ex=65b71710&is=65a4a210&hm=bb1e9f89308ee10010accf47b07338d1e2afc7594b83b51eda440a4235883a4e&)
+![All Products part 2](https://cdn.discordapp.com/attachments/639420321677443073/1196290195348271124/AllProducts2.png?ex=65b71710&is=65a4a210&hm=948ea1b0930a994022dbd73c21654ccdc0da2edb321abab35c7bed389867e451&)
+### Discounted Items
+![Discounted Items](https://cdn.discordapp.com/attachments/639420321677443073/1196279059009769634/DiscountendItems.png?ex=65b70cb1&is=65a497b1&hm=e7671d5e9e0ae21af294312335ee6c26dd751c2f799c68687e2caa476909ffdf&)
+### Shopping Cart
+![Shopping Cart](https://cdn.discordapp.com/attachments/639420321677443073/1196279061157253140/ShoppingCart.png?ex=65b70cb1&is=65a497b1&hm=1f76376fa5199613a520a5738038a8a89745864355451f4e6f1065c60e31a9c6&)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+### Modal Window
+![Modal Window](https://cdn.discordapp.com/attachments/639420321677443073/1196287439594082364/ModaleWindow.png?ex=65b7147f&is=65a49f7f&hm=10350845b330eebcb60e815fc71d5d42e2218dd526f755cea5169f6cdb7181df&)
+## Автор
+
+- Ольга - Junior Front-End Developer

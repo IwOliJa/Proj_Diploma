@@ -3,77 +3,79 @@ import { getCartFromLocStor } from "../../utils";
 
 export const postOrder = createAsyncThunk(
   "order/postOrder",
-  async (cart, { rejectWithValue }) => {
+  async ( cart, { rejectWithValue } ) => {
     try {
-      const response = await fetch("http://localhost:3333/order/send", {
+      const response = await fetch( "http://localhost:3333/order/send", {
         method: "POST",
-        body: JSON.stringify({ cart }),
+        body: JSON.stringify( { cart } ),
         headers: {
           "Content-type": "application/json; charset=utf-8",
         },
-      });
-      if (!response.ok) {
-        throw new Error("Server Error!");
+      } );
+      if ( !response.ok ) {
+        throw new Error( "Server Error!" );
       }
       const data = await response.json();
       return data;
-    } catch (error) {
-      return rejectWithValue(error.message);
+    } catch ( error ) {
+      return rejectWithValue( error.message );
     }
   }
 );
 
-export const cartSlice = createSlice({
+export const cartSlice = createSlice( {
   name: "cart",
   initialState: {
-    cart: [],
-    // cart: getCartFromLocStor(),
+    cart: getCartFromLocStor(),
   },
   reducers: {
-    addToCart: (state, action) => {
+    addToCart: ( state, action ) => {
       const { id, count } = action.payload;
 
-      const existingItemIndex = state.cart.findIndex((item) => item.id === id);
+      const existingItemIndex = state.cart.findIndex( ( item ) => item.id === id );
 
-      if (existingItemIndex !== -1) {
-        state.cart[existingItemIndex].count += count;
+      if ( existingItemIndex !== -1 ) {
+        state.cart[ existingItemIndex ].count += count;
       } else {
-        state.cart.push(action.payload);
+        state.cart.push( action.payload );
       }
     },
-    incrementCount: (state, action) => {
+    incrementCount: ( state, action ) => {
       const { id } = action.payload;
 
-      const existingItem = state.cart.find((item) => item.id === id);
+      const existingItem = state.cart.find( ( item ) => item.id === id );
 
-      if (existingItem) {
+      if ( existingItem ) {
         existingItem.count += 1;
       }
     },
-    decrementCount: (state, action) => {
+    decrementCount: ( state, action ) => {
       const { id } = action.payload;
 
-      const existingItem = state.cart.find((item) => item.id === id);
-      const existingItemIndex = state.cart.findIndex((item) => item.id === id);
+      const existingItem = state.cart.find( ( item ) => item.id === id );
+      const existingItemIndex = state.cart.findIndex( ( item ) => item.id === id );
 
-      if (existingItem) {
+      if ( existingItem ) {
         existingItem.count -= 1;
-        if (existingItem.count === 0) {
-          state.cart.splice(existingItemIndex, 1);
+        if ( existingItem.count === 0 ) {
+          state.cart.splice( existingItemIndex, 1 );
         }
       }
     },
-    removeFromCart: (state, action) => {
+    removeFromCart: ( state, action ) => {
       const { id } = action.payload;
-      const existingItemIndex = state.cart.findIndex((item) => item.id === id);
+      const existingItemIndex = state.cart.findIndex( ( item ) => item.id === id );
 
-      if (existingItemIndex !== -1) {
-        state.cart.splice(existingItemIndex, 1);
+      if ( existingItemIndex !== -1 ) {
+        state.cart.splice( existingItemIndex, 1 );
       }
     },
+    resetCart: ( state, action ) => {
+      state.cart = [];
+    },
   },
-});
+} );
 
-export const { addToCart, incrementCount, decrementCount, removeFromCart } =
+export const { addToCart, incrementCount, decrementCount, removeFromCart, resetCart } =
   cartSlice.actions;
 export default cartSlice.reducer;

@@ -24,53 +24,7 @@ export const postSale = createAsyncThunk(
 
 export const userSlice = createSlice({
   name: "user",
-  initialState: {
-    userInfo: {
-      name: "",
-      phone: "",
-      email: "",
-    },
-
-    errorFields: {
-      name: {
-        show: false,
-        text: "",
-      },
-      phone: {
-        show: false,
-        text: "",
-      },
-      email: {
-        show: false,
-        text: "",
-      },
-    },
-  },
-
-  reducers: {
-    updateValue: (state, action) => {
-      console.log(action.payload);
-      state[action.payload.key] = action.payload.value;
-    },
-
-    validateField: (state, action) => {
-      const { key, value } = action.payload;
-      let hasError = false;
-      let errorMessage = "";
-
-      if (value === "") {
-        errorMessage = "please fill in this field!";
-        hasError = true;
-      }
-
-      state.errorFields[action.payload.key] = {
-        show: hasError,
-        text: errorMessage,
-      };
-
-      return !hasError;
-    },
-  },
+  initialState: {},
 });
-export const { updateValue, validateField } = userSlice.actions;
+
 export default userSlice.reducer;

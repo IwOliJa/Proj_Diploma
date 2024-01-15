@@ -1,7 +1,8 @@
-import styles from "./index.module.css";
 import { Link } from "react-router-dom";
 
-function SaleTitle() {
+import styles from "./index.module.css";
+
+function SaleTitle () {
   return (
     <div className={styles.title_content}>
       <p className={styles.sale_header}>Sale</p>

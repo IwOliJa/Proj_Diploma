@@ -1,7 +1,8 @@
-import styles from "./index.module.css";
 import { Link } from "react-router-dom";
 
-function CartEmpty() {
+import styles from "./index.module.css";
+
+function CartEmpty () {
   return (
     <div className={styles.main_container}>
       <p className={styles.message}>

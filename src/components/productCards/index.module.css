@@ -10,6 +10,7 @@
   overflow: hidden;
   transition: 0.1s;
 }
+
 .card_link {
   font-size: 1.3rem;
   color: #282828;
@@ -24,9 +25,10 @@
   border-top-right-radius: 1rem;
   border-top-left-radius: 1rem;
   overflow: hidden;
-
+  background-size: cover;
   border: none;
 }
+
 .discount_percent {
   position: absolute;
   right: 0;
@@ -44,6 +46,7 @@
 
 .adding_btn {
   position: absolute;
+  top: 45%;
   left: -100%;
   width: 284px;
   background-color: #339933;
@@ -55,7 +58,12 @@
   text-align: center;
   padding: 1rem 2rem;
   margin: 1rem;
+
+  opacity: 0;
+
+  transition: 0.3s ease-out;
 }
+
 .adding_btn:hover {
   background-color: #282828;
 }
@@ -73,7 +81,7 @@
 .card_wrapper:hover .adding_btn {
   left: 0;
   top: 45%;
-  transition: 2s;
+  opacity: 1;
 }
 
 .card_name {
@@ -81,8 +89,8 @@
   text-overflow: ellipsis;
   margin: 2rem 1.4rem;
 }
+
 .card_name:hover {
-  overflow: visible;
   cursor: pointer;
 }
 
@@ -111,6 +119,7 @@
     gap: 5rem;
   }
 }
+
 @media (max-width: 768px) {
   .prodact_wrapper {
     gap: 2rem;
