@@ -64,6 +64,10 @@ function AllDiscounts () {
         filteredList.sort( ( a, b ) => b.discont_price - a.discont_price );
       }
 
+      if ( filter.sortOrder === "A_to_Z" ) {
+        filteredList.sort( ( a, b ) => a.title.localeCompare( b.title ) );
+      }
+
       setFilterProducts( filteredList );
     };
 

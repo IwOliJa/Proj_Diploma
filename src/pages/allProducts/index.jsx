@@ -18,6 +18,7 @@ function AllProducts () {
   const [ filter, setFilter ] = useState( {
     minPrice: "",
     maxPrice: "",
+    fromAToZ: "",
     showDiscount: false,
     sortOrder: "default",
   } );
@@ -72,6 +73,10 @@ function AllProducts () {
           const priceB = b.discont_price !== null ? b.discont_price : b.price;
           return priceB - priceA;
         } );
+      }
+
+      if ( filter.sortOrder === "A_to_Z" ) {
+        filteredList.sort( ( a, b ) => a.title.localeCompare( b.title ) );
       }
 
       setFilterProducts( filteredList );

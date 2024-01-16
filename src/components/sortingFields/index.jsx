@@ -6,6 +6,7 @@ function SortingFields ( { filter, setFilter, hideDiscountButton } ) {
     { value: "default", name: "by default" },
     { value: "price_low", name: "Price (Low to High)" },
     { value: "price_high", name: "Price (High to Low)" },
+    { value: "A_to_Z", name: "Name (From A to Z)" },
   ];
 
   return (
