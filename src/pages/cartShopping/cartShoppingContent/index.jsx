@@ -5,7 +5,7 @@ import { regExp } from "../../../utils/regExp.js";
 import { VscChromeClose } from "react-icons/vsc";
 
 import { setShow } from "../../../store/slices/modaleSlice.js";
-import { incrementCount, decrementCount, removeFromCart, postOrder, resetCart } from "../../../store/slices/cartSlice.js";
+import { incrementCount, decrementCount, removeFromCart, postOrder } from "../../../store/slices/cartSlice.js";
 
 import styles from "./index.module.css";
 
@@ -85,7 +85,7 @@ function CartShoppingContent () {
         } );
 
       dispatch( setShow() );
-      dispatch( resetCart() );
+      // dispatch( resetCart() );
 
       setInputValues( { name: "", phone: "", email: "", } );
 

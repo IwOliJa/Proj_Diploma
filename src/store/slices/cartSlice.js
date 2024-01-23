@@ -27,6 +27,7 @@ export const cartSlice = createSlice( {
   name: "cart",
   initialState: {
     cart: getCartFromLocStor(),
+    status: null,
   },
   reducers: {
     addToCart: ( state, action ) => {
@@ -74,6 +75,21 @@ export const cartSlice = createSlice( {
       state.cart = [];
     },
   },
+
+  extraReducers: ( builder ) => {
+    builder
+      .addCase( postOrder.pending, ( state, action ) => {
+        state.status = "pending";
+      } )
+      .addCase( postOrder.fulfilled, ( state, action ) => {
+        state.status = "fulfilled";
+        state.cart = [];
+      } )
+      .addCase( postOrder.rejected, ( state, action ) => {
+        state.status = "rejected"
+
+      } )
+  }
 } );
 
 export const { addToCart, incrementCount, decrementCount, removeFromCart, resetCart } =

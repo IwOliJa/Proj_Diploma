@@ -27,7 +27,7 @@ function Header ( { menulist } ) {
   const totalCount = cart.reduce( ( sum, item ) => sum + item.count, 0 );
 
   return (
-    <div className={styles.header}>
+    <header className={styles.header}>
       <nav className={styles.nav_menu}>
         <Link to="/">
           <img className={styles.header_logo} src={logo} alt="logo" />
@@ -55,7 +55,7 @@ function Header ( { menulist } ) {
         </Link>
       </nav>
       <div className={styles.hr}></div>
-    </div>
+    </header>
   );
 }
 

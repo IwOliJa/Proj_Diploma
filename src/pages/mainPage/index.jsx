@@ -5,12 +5,12 @@ import MainTitle from "../../components/mainTitle";
 
 function MainPage () {
   return (
-    <div>
+    <main>
       <MainTitle />
       <MainCategories />
       <MainForm />
       <MainSale />
-    </div>
+    </main>
   );
 }
 

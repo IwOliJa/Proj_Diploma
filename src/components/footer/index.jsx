@@ -5,11 +5,11 @@ import styles from "./index.module.css";
 
 function Footer () {
   return (
-    <div className={styles.main_container}>
+    <footer className={styles.main_container}>
       <p>Contact</p>
       <ContactBlock />
       <LocationBlock />
-    </div>
+    </footer>
   );
 }
 
