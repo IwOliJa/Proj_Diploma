@@ -58,21 +58,24 @@ function ProducktInfoBlock ( {
           </span>
         )}
         <div className={styles.counting_filds}>
-          <button
-            className={styles.count_button}
-            onClick={() => {
-              dispatch( decrement() );
-              isClicked && btnClick();
-            }}
-          >-</button>
-          <div className={styles.count_data}>{count}</div>
-          <button
-            className={styles.count_button}
-            onClick={() => {
-              dispatch( increment() );
-              isClicked && btnClick();
-            }}
-          >+</button>
+          <div className={styles.counting_items}>
+            <button
+              className={styles.count_button}
+              onClick={() => {
+                dispatch( decrement() );
+                isClicked && btnClick();
+              }}
+            >-</button>
+            <div className={styles.count_data}>{count}</div>
+            <button
+              className={styles.count_button}
+              onClick={() => {
+                dispatch( increment() );
+                isClicked && btnClick();
+              }}
+            >+</button>
+          </div>
+
           <input
             type="button"
             className={[ `${styles.adding_btn} ${isClicked && styles.added}` ]}

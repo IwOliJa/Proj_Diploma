@@ -71,9 +71,6 @@ export const cartSlice = createSlice( {
         state.cart.splice( existingItemIndex, 1 );
       }
     },
-    resetCart: ( state, action ) => {
-      state.cart = [];
-    },
   },
 
   extraReducers: ( builder ) => {
@@ -84,6 +81,7 @@ export const cartSlice = createSlice( {
       .addCase( postOrder.fulfilled, ( state, action ) => {
         state.status = "fulfilled";
         state.cart = [];
+        console.log( action.payload );
       } )
       .addCase( postOrder.rejected, ( state, action ) => {
         state.status = "rejected"
@@ -92,6 +90,6 @@ export const cartSlice = createSlice( {
   }
 } );
 
-export const { addToCart, incrementCount, decrementCount, removeFromCart, resetCart } =
+export const { addToCart, incrementCount, decrementCount, removeFromCart } =
   cartSlice.actions;
 export default cartSlice.reducer;

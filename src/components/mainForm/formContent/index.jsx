@@ -74,13 +74,6 @@ function FormContent () {
 
     if ( isNameValid && isPhoneValid && isEmailValid ) {
       dispatch( postSale( inputValues ) )
-        .then( ( result ) => {
-          console.log( "Server response:", result );
-        } )
-        .catch( ( error ) => {
-          console.error( "Error:", error );
-        } );
-
       setInputValues( { name: "", phone: "", email: "" } );
       setIsClicked( !isClicked );
     } else {

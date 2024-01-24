@@ -97,7 +97,13 @@
 
 .counting_filds {
   display: flex;
-  margin: 1.5rem 0;
+  gap: 2rem;
+  margin-bottom: 2rem;
+  margin-top: 2rem;
+}
+
+.counting_items {
+  display: flex;
 }
 
 .count_button {
@@ -108,6 +114,7 @@
   background-color: transparent;
   font-size: 2rem;
 }
+
 
 .count_data {
   width: 96px;
@@ -128,7 +135,6 @@
 
   border-radius: 0.3rem;
   border: #339933;
-  margin-left: 1.8rem;
 
   background-color: #339933;
   font-size: 1.2em;
@@ -172,15 +178,16 @@
   margin-top: 1rem;
 }
 
-@media (max-width: 1440px) {
-  .big_card {
-    margin-right: 0;
-  }
-}
-
-@media (max-width: 1024px) {
+@media (max-width: 1250px) {
   .content_wrapper {
     flex-direction: column;
+    height: auto;
+    gap: 2rem;
+  }
+
+  .small_card {
+    width: 250px;
+    height: 230px;
   }
 
   .images_content {
@@ -198,49 +205,71 @@
     justify-content: center;
   }
 
+  .adding_btn {
+    margin: 0;
+  }
+}
+
+@media (max-width: 1024px) {
+  .content_small {
+    display: none;
+  }
+
+  .small_card {
+    width: 200px;
+    height: 180px;
+  }
+
+  .big_card {
+    height: 600px;
+  }
+
+  .info_content {
+    width: 100%;
+    text-align: center;
+  }
+
   .product_name {
-    font-size: 3.5rem;
     margin-top: 1.8rem;
   }
 }
 
 @media (max-width: 768px) {
-  .images_content {
-    flex-direction: column-reverse;
-    align-items: center;
-
-    margin-top: 0;
-  }
-
   .big_card {
-    width: 80%;
+    width: 420px;
+    height: 400px;
+    margin: 0;
   }
 
-  .content_small {
-    flex-direction: row;
-    gap: 1.5rem;
+  .counting_filds {
+    flex-wrap: wrap;
+    gap: 2rem;
   }
+
+  .product_price {
+    font-size: 2rem;
+  }
+
+  .discount_item {
+    font-size: 2rem;
+  }
+
 }
 
 @media (max-width: 425px) {
   .big_card {
-    width: 100%;
-  }
-
-  .content_small {
-    display: none;
+    width: 80%;
+    height: 300px;
   }
 
   .product_name {
     font-size: 3rem;
   }
 
-  .product_price {
-    font-size: 3.5rem;
-  }
-
-  .discount_item {
-    font-size: 2rem;
+  .discont_percent {
+    width: 2 rem;
+    height: 2rem;
+    font-size: 1.2rem;
   }
 
   .counting_filds {

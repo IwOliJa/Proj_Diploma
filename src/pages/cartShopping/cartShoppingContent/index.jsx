@@ -76,16 +76,9 @@ function CartShoppingContent () {
     if ( isNameValid && isPhoneValid && isEmailValid ) {
       const data = { cart, inputValues };
 
-      dispatch( postOrder( data ) )
-        .then( ( result ) => {
-          console.log( "Server response:", result );
-        } )
-        .catch( ( error ) => {
-          console.error( "Error:", error );
-        } );
+      dispatch( postOrder( data ) );
 
       dispatch( setShow() );
-      // dispatch( resetCart() );
 
       setInputValues( { name: "", phone: "", email: "", } );
 

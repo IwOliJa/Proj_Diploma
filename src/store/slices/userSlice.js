@@ -34,7 +34,7 @@ export const userSlice = createSlice( {
       } )
       .addCase( postSale.fulfilled, ( state, action ) => {
         state.status = "fulfilled";
-        state.user = action.payload;
+        console.log( action.payload );
       } )
       .addCase( postSale.rejected, ( state, action ) => {
         state.status = "rejected"
