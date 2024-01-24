@@ -161,7 +161,7 @@
   }
 }
 
-@media (max-width: 426px) {
+@media (max-width: 425px) {
   .nav_menu_list {
     top: 0;
     left: -100%;
@@ -198,7 +198,8 @@
   }
 
   .items_counter {
-    right: 2.2rem;
+    padding: 0.3rem 0.5rem;
+    right: 3rem;
   }
 }
 

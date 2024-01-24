@@ -54,7 +54,7 @@ function ProducktInfoBlock ( {
           <span className={styles.discount_item}>
             ${( price * count ).toFixed( 2 )}
             <span className={styles.delete_symbol}></span>
-            <span className={styles.discont_percent}>{discountPercent}%</span>
+            <span className={styles.discount_percent}>{discountPercent}%</span>
           </span>
         )}
         <div className={styles.counting_filds}>
